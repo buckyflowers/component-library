@@ -1,0 +1,403 @@
+// document
+
+html {
+  background-color: #fff;
+  // -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// text 
+// html elements are not styled by default, put .is-formatted 
+// to a wrapper to get these styles. or use the individual helpers 
+// text .is-formatted
+
+body {line-height:1.4em;}
+
+.em, .is-formatted em,  .i, .is-formatted i {font-style:italic}
+.strong, .is-formatted strong, .b, .is-formatted b {font-weight:bold}
+.code, .is-formatted code, .pre, .is-formatted pre {
+  display: block;
+  background: #2d2d2d;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #ccc;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+.p, .is-formatted p {margin-bottom: 1.5em;}
+.blockquote, .is-formatted blockquote {
+  padding:0 4em;
+  margin-bottom: 1.5em;
+  font-style: italic;
+  position: relative;
+  &:before {
+    content: "\201C";
+    display: block;
+    position: absolute;
+    color: #222;
+    font-size: 80px;
+    top: 1px;
+    left: 68px;
+    z-index: 0;
+    opacity: .2;
+    font-weight: bold;
+  }
+}
+.big, .is-formatted big {font-size:1.125em}
+.small, .is-formatted small{font-size:.875em}
+.del, .is-formatted del {text-decoration:line-through}
+.ul, .is-formatted ul, .ol, .is-formatted ol{margin-bottom: 1.5em}
+.li {margin-bottom: 1.5em}
+.is-formatted ul, .is-formatted ol {padding-left: 0; margin-left: 84px;}
+.is-formatted ul {list-style:disc;}
+.is-formatted ol {list-style:decimal;}
+
+.h1, .is-formatted h1,
+.h2, .is-formatted h2,
+.h3, .is-formatted h3,
+.h4, .is-formatted h4,
+.h5, .is-formatted h5,
+.h6, .is-formatted h6{
+  margin-bottom: 1.2em;
+  margin-top:2.4em;
+  font-weight:bold;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+.is-formatted{
+  p:first-child, ol:first-child, ul:first-child, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+  }
+  p:last-child, ol:last-child, ul:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.h1, .is-formatted h1 {font-size: 2.25em;}    //36 @ 16
+.h2, .is-formatted h2 {font-size: 1.875em;}   //30 @ 16
+.h3, .is-formatted h3 {font-size: 1.5em;}     //24 @ 16
+.h4, .is-formatted h4 {font-size: 1.3125em;}  //21 @ 16
+.h5, .is-formatted h5 {font-size: 1.125em;}   //18 @ 16
+.h6, .is-formatted h6 {font-size: 1em;}       //16 @ 16
+ 
+.is-formatted h1:first-child, .is-formatted script + h1,
+.is-formatted h2:first-child, .is-formatted script + h2,
+.is-formatted h3:first-child, .is-formatted script + h3,
+.is-formatted h4:first-child, .is-formatted script + h4,
+.is-formatted h5:first-child, .is-formatted script + h5,
+.is-formatted h6:first-child, .is-formatted script + h6 {margin-top:0;}
+
+.is-formatted img {width:100%;margin-bottom: 1.5em;}
+
+
+
+// TODO: move this
+.color_lightest {color:#ffffff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);}
+
+
+
+// inputs 
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder,input::-moz-placeholder, textarea::-moz-placeholder, input::-input-placeholder, textarea::input-placeholder {
+  color: #000;
+  text-shadow: 0 1px rgba(255,255,255,1);
+  opacity: .5;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder,input:focus::-moz-placeholder, textarea::-moz-placeholder, input::-input-placeholder, textarea::input-placeholder {
+  opacity: .2;
+}
+
+.input_checkbox {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 16px;
+  margin: 0;
+  width: 16px;
+  -webkit-appearance: none;
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%));
+  @include box-shadow (inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3));
+  @include box-sizing(border-box);
+  &:before {
+    @extend .icon;
+    content: "";
+    background-position: 100px 100px;
+    height: 16px !important;
+    width: 16px !important;
+  }
+  &:hover {
+    border-color: #999;
+  }
+  &:active {
+    border-color: $linkblue;
+    @include box-shadow(0 0 5px rgba(85, 129, 211, 0.5));
+  }
+  &:checked {
+    border-color: #84be2a;
+    border-top-color: #649a10;
+    background-color: #b0de4b;
+    &:before {
+      background-position: -43px -63px;
+    }
+  }
+}
+
+.input_radio {
+  @extend .input_checkbox;
+  border-radius: 10000px;
+  &:before {
+    border-radius: 10000px;
+    display: block !important;
+    height: 6px !important;
+    margin: 4px !important;
+    width: 6px !important;
+  }
+  &:checked {
+    &:before {
+      background: #000;
+      background: rgba(0,0,0,.3);
+      @include box-shadow (inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3));
+    }
+  }
+}
+
+// TODO: move this
+.button {width: auto;
+ }
+
+
+
+
+// links
+
+a {
+  text-decoration: none;
+  color: $linkblue;
+  cursor: pointer;
+  @include transition(color .25s ease-out, border-color .25s ease-out, opacity .25s linear, background .25s ease-out);
+  -webkit-backface-visibility: hidden;
+  &:hover {
+      color: $linkbluehover;
+      @include transition(none);
+      outline:none
+  }
+  &:active {
+      outline:none;
+  }
+}
+
+.link_secondary {
+  color: rgba(0,0,0,.7);
+}
+.link_inverted{
+  color:#ffffff;
+  &:hover{
+    color:#ffffff;
+    opacity: .8;
+  }
+}
+
+.link_follow {
+  display: block !important;
+  line-height: 1em;
+  color: $linkblue;
+  @extend .text_small;
+}
+
+.link_following {
+  color: #999;
+  @extend .link_follow;
+}
+
+.link_top-contributor {
+  color: #999;
+  @extend .link_follow;
+}
+
+
+// TODO: move this
+a.inverted {
+  color: #fff;
+  &:hover{color:#fff; @include opacity(.8);}
+  &:active{color:#fff; @include opacity(.6);}
+}
+
+.view_more { color: #777; }
+
+
+// other html tags
+
+hr{
+  border-style: solid;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #000;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8);
+  @include opacity(.2);
+  margin: 0;
+  clear:both;
+}
+
+
+// TODO: move this
+// hilight -- used to highlight inline text
+// originally called label but conflicted on site with old stuff
+.hilight {
+  text-align: center;
+  display: inline-block;
+  height: 40px;
+  line-height: 42px;
+  padding: 0 6px;
+  color: #777;
+  font-weight: bold;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #ddd;
+  border-radius: 4px;
+  @include box-sizing(border-box);
+}
+.hilight_full{display:block; padding: 0;}
+.hilight_you{
+  background: #ddd;
+  color: #666;
+  display: block;
+}
+.hilight_info {}
+.hilight_success {}
+.hilight_warning {}
+.hilight_highlight {}
+.hilight_following {}
+.hilight_important {
+    color: #345112;
+    box-shadow: 0 0 3px rgba(127, 206, 33, 0.78);
+    background-color: #d6f987;
+}
+.hilight_example {
+  display: block;
+  background:none;
+  border: 1px dashed #ccc;
+}
+.hilight_bravo {
+  @extend .hilight_important;
+  display: block;
+}
+
+.hilight_size_mini {
+  height: 16px;
+  padding: 0 6px;
+  text-transform: uppercase;
+  font-size: .666em; //10px
+  font-weight: bold;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+.hilight_size_small {
+  height: 26px;
+  padding:0 6px;
+  font-size: .86666em; // 12px
+  line-height: 28px;
+}
+.hilight_size_medium {
+  height: 32px;
+  padding:0 6px;
+  line-height: 34px;
+}
+.hilight_size_large {
+  height: 60px;
+  font-size: 1.4em; 
+  padding: 0 6px;
+  line-height: 62px;
+}
+
+
+
+// TODO: move this
+// dividers
+
+.divider {
+	display:block;
+  border-right: 1px solid #ccc;
+  border-right: 1px solid rgba(0,0,0,.3);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+
+.divider_user_bubble {
+    height: 50px;
+	border:none;
+	box-shadow:none;
+    width: 7px;
+	background: url("/assets/home/nav_bar_icons_w.png") no-repeat scroll -32px -138px transparent;
+}
+
+
+
+
+// rules
+
+.rule {
+  border-style: solid;
+  display: block;
+  border: none;
+  width: auto;
+  border-top: 1px solid #000;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8);
+  @include opacity(.2);
+  margin: 0;
+  clear:both;
+}
+
+.rule_sidebar_home {
+  margin: .8em -.8em;
+}
+
+.double-line {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: 0;
+  width: 80%;
+  height: 2px;
+  margin-top: -2px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  @include opacity(.2);
+  @include box-shadow(inset 0 1px rgba(255,255,255,.2), 0 1px rgba(255,255,255,.2));
+}
+
+.double-line_left {
+  left: 0;
+  right: auto;
+  @extend .double-line;
+}
+
+.double-line_light {
+  border-color: #fff;
+  @include box-shadow(inset 0 1px rgba(0,0,0,.2), 0 1px rgba(0,0,0,.2));
+}
+
+.sup {
+  vertical-align: super;
+  font-size: .5em;
+}
+
+// spacing
+
+.element{
+  margin-bottom:$space-0_5x;
+}
+
+.block{
+  margin-bottom:$space;
+}
+
+.section{
+  margin-bottom:$space-3x;
+}

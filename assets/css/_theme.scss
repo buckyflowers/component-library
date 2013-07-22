@@ -1,0 +1,306 @@
+// custom colors
+.custom-color-1 {
+  background: #313745;
+}
+.custom-color-2 {
+  background: #5a78e9;
+}
+.custom-color-3 {
+  background: #97c52f;
+}
+.custom-color-4 {
+  background: #9a5ae9;
+}
+
+// text colors
+.text_color_1 {color: #222; &:hover{color:#555;}}
+.text_color_2 {color: #555; &:hover{color:#888;}}
+.text_color_3 {color: #777; &:hover{color:#aaa;}}
+.text_color_4 {color: #aaa; &:hover{color:#ccc;}}
+.text_color_5 {color: #ccc; &:hover{color:#eee;}}
+.text_color_6 {color: #eee; &:hover{color:#fff;}}
+.text_color_7 {color: #fff; &:hover{color:#eee;}}
+
+.text_error {color: #C42424;}
+.text_success {color: #556F30;}
+
+// Background Colors
+// Some explantion for some of the psuedo classes in here, if the background is dark,
+// we want to change inputs, and buttons border color to not look fuzzy.
+// That's why you see those declarations like at the end of .bg_2
+
+// Light grey for buttons
+.bg_1 {
+  background-color: #cbced6;
+  border-color: #a1a5ae;
+  border-bottom-color: #7d8391;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15));
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%));
+  &.button:hover { background-color: #d8dadf; color: #333; }
+  &.button:active { background-color: #cbced6; }
+}
+
+.bg_1__item {
+  border-color: #a1a5ae;
+} 
+
+// Dark greyish blue
+.bg_2 {
+  color:#fff;
+  background-color: #3a475a;
+  border-color: #252c3f;
+  border-bottom-color: #11151e;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 1px rgba(255,255,255,.1), 0 1px 3px rgba(0,0,0,.15));
+  @include background-image(linear-gradient( rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%));
+  text-shadow: 0 1px 0 rgba(0,0,0,.8);
+  &.button:hover { background-color: #49586a; color: #fff; }
+  &.button:active { background-color: #3e4b5b; }
+}
+.bg_2__item {
+  border-color: #252c3f;
+} 
+
+// Bright blue 
+.bg_3 {
+  background-color: #5a78e9;
+  border-color: #375da5;
+  border-bottom-color: #1a2f57;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.4), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15));
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%));
+  &.button:hover {color: #fff; background-color: #6091ec;}
+  &.button:active { background-color: #5682d3; }
+}
+.bg_3__item {
+  border-color: #375da5;
+} 
+
+// color_green
+.bg_4 {
+  color: #fff;
+  border-color: #2e9b3b;
+  border-bottom-color: #21822d;
+  background-color: #41be50;
+  @include background-image(linear-gradient( rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15));
+  text-shadow: 0 1px 0 rgba(0,0,0,.4);
+  &.button:hover {color: #fff; background-color: #59d168;}
+  &.button:active { background-color: #41be50; }
+}
+.bg_4__item {
+  border-color: #7fa34b;
+} 
+
+// color_dk-grey
+.bg_5 {
+  color: #ffffff;
+  border-color: #2c2d33;
+  border-bottom-color: #0a0b0d;
+  background: #434953;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 1px rgba(255,255,255,.10), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover { color: #fff; background-color: #4e4f57;}
+  &.button:active { background-color: #45464C; }
+}
+.bg_5__item {
+  border-color: #2c2d33;
+} 
+
+// grey
+.bg_6 {
+  background-color: #777;
+  border-color: #555;
+  border-bottom-color: #333;
+  color:#fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  @include background-image(linear-gradient( rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.15), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover { background-color: #888; color: #fff; }
+  &.button:active { background-color: #777; }
+}
+.bg_6__item {
+  border-color: #555;
+} 
+
+// off-white
+.bg_7 {
+  color: #555;
+  background: #eee;
+  border-color: #ccc;
+  border-bottom-color: #aaa;
+  text-shadow: 0 1px 0px rgba(255,255,255,1);
+  @include background-image(linear-gradient( rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 1px rgba(255,255,255,.7  ), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover{ background-color: #f8f8f8; color: #555;}
+  &.button:active { background-color: #eee; }
+}
+.bg_7__item {
+  border-color: #ccc;
+} 
+
+// yellow
+.bg_8 {
+  color: #595b12;
+  border-color: #d5d81b;
+  border-bottom-color: #d0b01b;
+  background-color: #feffba;
+  text-shadow: 0 1px 0px rgba(255,255,255,.9);
+  @include background-image(linear-gradient( rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 1px rgba(255,255,255,.8  ), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover {color: #595b12; background-color: #feffda;}
+  &.button:active { background-color: #f6f865; }
+}
+.bg_8__item {
+  border-color: #e0c649;
+} 
+
+// very light blue
+.bg_9 {
+  color: #242c3f;
+  border-color: #A4D3EE;
+  border-bottom-color: #7ec0e6;
+  background: #F5F9FF;
+  text-shadow: 0 1px 0px rgba(255,255,255,.9);
+  @include background-image(linear-gradient( rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 1px rgba(255,255,255,.7), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover{ background-color: #ffffff; color: #242c3f; }
+}
+.bg_9__item {
+  border-color: #A4D3EE;
+} 
+
+// red
+.bg_10 {
+  color: #fff;
+  background-color: #C42424;
+  border-color: #9e2626;
+  border-bottom-color: #5d1616;
+  text-shadow: 0 1px 0px rgba(0,0,0,.3);
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 1px rgba(255,255,255,.10), 0 1px 3px rgba(0,0,0,.15));
+  &.button:hover { background-color: #da3434; color: #fff;}
+}
+.bg_10__item {
+  border-color: #9e2626;
+} 
+
+// white
+.bg_11 {
+  color: #222;
+  background: #fff;
+  border-color: #ccc;
+  border-bottom-color: #bbb;
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+  &.button:hover { background-color: #f8f8f8; color: #555;}
+  &.button:active { background-color: #fff; }
+}
+.bg_11__item {
+  border-color: #ccc;
+} 
+
+
+
+// Light blue used for follow button
+.bg_12 {
+  background-color: #c4dbff;
+  border-color: #9bb8ec;
+  border-bottom-color: #6b8ece;
+  color: #192e71;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.90), inset 0 -1px 1px rgba(255,255,255,.70), 0 1px 3px rgba(0,0,0,.15));
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%));
+  &.button:hover {color: #192e71; background-color: #c5d7f8;}
+  &.button:active { background-color: #acc5f2; }
+}
+.bg_12__item {
+  border-color: #375da5;
+} 
+
+// transparent
+.bg_13 {
+  color: #222;
+  background: transparent;
+  border-color: rgba(0,0,0,.1);
+  border-color: rgba(0,0,0,.2);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.8), 0 1px 0 rgba(255,255,255,.8));
+  &.button:hover { background-color:rgba(255,255,255,.02); color: #555;}
+  &.button:active { background-color:rgba(255,255,255,.1); }
+}
+.bg_13__item {
+  border-color: #ccc;
+}
+
+// dark border
+.border_dark, .button.border_dark, .button.publish.unpublish {
+  border-color: #18191D;
+}
+
+// shadow and gradient mods
+.bg_no_shadows {
+    @include box-shadow(none);
+}
+
+.bg_no_gradient {
+  @include background-image(none);
+}
+
+.bg_drop-shadow-only {
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+}
+
+.bg_flat {
+  @include background-image(none);
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+  text-shadow: none;
+}
+
+.flat {
+  @include box-shadow(none);
+  @include background-image(none);
+  text-shadow: none;
+}
+
+.bg_inset {
+  @include box-shadow( inset 0 1px 1px rgba(0,0,0,.15), 0 1px rgba(255,255,255,.2));
+  &.button:active {@include box-shadow( inset 0 2px 6px rgba(0,0,0,.3), 0 1px rgba(255,255,255,.2));}
+}
+
+.bg_inset-white {
+  @include box-shadow(0 1px 0 rgba(255,255,255, 0.9), inset 0 1px 1px rgba(0,0,0,.15), inset 0 -1px 1px rgba(255, 255, 255, 0.2));
+  &.button:active {@include box-shadow( inset 0 2px 6px rgba(0,0,0,.3), 0 1px rgba(255,255,255,.2));}
+}
+
+.bg_inset_deep {
+  @include box-shadow(5px -5px 4px -4px rgba(0, 0, 0, 0.4) inset, -5px 6px 5px -5px rgba(0, 0, 0, 0.6) inset);
+}
+
+.bg_on-dark {
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 1px rgba(255,255,255,.10), 0 1px 3px rgba(0,0,0,.9));
+}
+
+// Glow used for icons in header
+.glow:after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 200px;
+  z-index: 0;
+  @include transition(all .4s linear);
+}
+.glow_white:hover .glow:after {
+  background-color: rgba(255,255,255,.1);
+  @include box-shadow(0 0 5px 5px rgba(255,255,255, .1));
+}
+.glow_white:active .glow:after, .glow_white.active .glow:after {
+  background-color: rgba(255,255,255,.2);
+  @include box-shadow(0 0 5px 5px rgba(255,255,255, .2));
+}

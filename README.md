@@ -1,2 +1,2 @@
-component-libray
+component-library
 ================

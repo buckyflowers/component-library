@@ -1,0 +1,57 @@
+// import all fonts
+
+@font-face {
+    font-family: unit;
+    src: url("/assets/fonts/UnitWeb.eot");
+    src: url("/assets/fonts/UnitWeb.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/UnitWeb.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: unit;
+    src: url("/assets/fonts/UnitWeb-Ita.eot");
+    src: url("/assets/fonts/UnitWeb-Ita.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/UnitWeb-Ita.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: unit;
+    src: url("/assets/fonts/UnitWeb-Bold.eot");
+    src: url("/assets/fonts/UnitWeb-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/UnitWeb-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: unit;
+    src: url("/assets/fonts/UnitWeb-BoldIta.eot");
+    src: url("/assets/fonts/UnitWeb-BoldIta.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/UnitWeb-BoldIta.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+::selection {
+    background: rgba(95,102,242,.3);
+}
+
+
+// set site wide typography on elements
+body {
+    line-height:1.3em;
+    @include fontstack;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+}
+
+input, textarea {
+  font-size: 1em;
+}
+
+.hasFontSmoothing-false body, .hasFontSmoothing-false input, .hasFontSmoothing-false textarea {
+  font-family: helvetica, arial, sans-serif;
+}
+
+// text inputs
+input, textarea {
+  @include fontstack;
+}

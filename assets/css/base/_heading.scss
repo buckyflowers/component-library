@@ -1,0 +1,54 @@
+// TODO: take out math and comments, use sass comments
+// headings
+
+.heading {
+
+}
+
+.nano { // 15px
+    font-size: #{14 / $em}em;
+    line-height: 1em;
+}
+
+.micro { // 18px
+    font-size: #{18 / $em}em;
+    line-height: 1em;
+}
+.milli  { // 21px
+    font-size: #{21 / $em}em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+}
+
+.normal { // 24px
+    font-size: #{24 / $em}em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+}
+
+.kilo { // 30px
+    font-size: #{30 / $em}em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+}
+
+.mega { // 36px
+    font-size: #{36 / $em}em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+}
+
+.giga { // 48px
+    font-size: #{48 / $em}em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+}
+
+.tera {
+/* 55px / 16px */
+    font-size: #{60 / $em}em;
+    line-height: 1em;
+}
+
+
+

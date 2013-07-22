@@ -1,0 +1,37 @@
+// include needed compass libraries
+@import "bourbon/bourbon";
+
+// base - reset, base element styles, custom mixins, variables, animations, typography, and grid
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/content";
+@import "base/heading";
+@import "base/typography";
+@import "base/animation";
+@import "base/icon";
+@import "base/grid";
+
+
+// modules need to be included here to be made available sitewide 
+@import "modules/alert";
+@import "modules/box";
+@import "modules/button";
+@import "modules/dropdown";
+@import "modules/field";
+@import "modules/figure";
+@import "modules/footer";
+@import "modules/header";
+@import "modules/indicator";
+@import "modules/line";
+@import "modules/list";
+@import "modules/media";
+@import "modules/nav-bar";
+@import "modules/nav";
+@import "modules/page";
+@import "modules/post-tile";
+
+
+// utilities, helpers, states, and themes
+@import "utilities";
+@import "theme";

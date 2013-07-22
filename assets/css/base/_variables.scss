@@ -1,0 +1,51 @@
+// baseline grid
+
+$font-size: 16; //in pixels
+$base: $font-size * 1.4  ; // vertical space unit 15*1.4=21
+$em: $font-size * 1;
+
+// vertical rhythm in pixels (returns pixels)
+$base: 12; // vertical space unit
+$space-0_5x: ($base/2) * 1px;
+$space: $base*1px;
+$space-1_5x: ($base * 1.5) * 1px;
+$space-2x: ($base * 2) * 1px;
+$space-2_5x: ($base * 2.5) * 1px;
+$space-3x: ($base * 3) * 1px;
+$space-4x: ($base * 4) * 1px;
+
+
+// layout grid
+$grid-columns: 12;
+$grid-column-width: (100% / $grid-columns);
+$grid-gutter-width: 1.5em; //24px
+
+
+
+
+// colors
+
+$verydarkgrey: #222; /* link color :hover */
+$linkblue: #5a78e9; /* link color */
+$linkbluehover: #7e97f6; /* link color :hover */
+$white: #fff; /* link color :hover */
+$offwhite: #f3f3f3; /* link color :hover */
+$greyborder: #ccc; /* link color :hover */
+$lightblue: #F5F9FF; /*Light blue*/
+$lightblueborder: #A4D3EE; /*light blue border*/
+$brightblue: #5682d3; /*light blue border*/
+$brightbluehover: #6091ec; /*light blue border*/
+$brightblueborder: #2e4e89; /*light blue border*/
+
+
+// icon sprite positions
+$icon: -4px;
+$icon_white: -25px;
+$icon_black:-46px;
+$icon_white: -67px; 
+$icon_transparent: -88px;
+$icon_transparent:-109px;
+$icon_special:-130px;
+$icon_special2:-151px;
+$icon_special3:-172px;
+

@@ -1,0 +1,332 @@
+.icon {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 20px;
+  height: 20px;
+  position:relative;
+  margin: 0;
+  background-image: url("/assets/images/no-repeat.png");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .icon {
+    background-image: url("/assets/images/no-repeat-2x.png");
+    background-size: 200px 3816px;
+  }
+}
+
+.icon_fl {
+  display: block;
+  float: left;
+}
+
+.icon_fr {
+  display: block;
+  float: left;
+}
+
+.icon_inline {
+  margin-top: -2px;
+}
+
+.icon_no-text {
+  margin-right: 0;
+  text-indent: -10000px;
+}
+
+.icon_small {
+  margin-top: 0;
+  margin-right: 4px;
+  width: 10px;
+  height: 10px;
+}
+
+.icon_medium {
+  width: 18px;
+  height: 18px;
+}
+
+.icon_gigantic {
+  display: block;
+  margin: 20px auto 10px;
+  height: 80px;
+  width: 80px;
+}
+
+.icon_setting{ background-position:0 0; }
+.icon_setting_white{ background-position:-20px 0; }
+.icon_setting_transparent{ background-position: -40px 0; }
+
+.icon_alert{ background-position: 0 -20px; }
+.icon_alert_white{ background-position: -20px -20px; }
+.icon_alert_transparent{ background-position: -40px -20px; }
+.icon_alert_special{ background-position: -60px -20px; }
+
+.icon_checkmark{ background-position: -0px -40px; }
+.icon_checkmark_white{ background-position:-20px -40px; }
+.icon_checkmark_transparent{ background-position: -40px -40px; }
+.icon_checkmark_special { background-position: -60px -40px; }
+
+.icon_small {
+  &.icon_checkmark{ background-position: -0px -60px; }
+  &.icon_checkmark_white{ background-position:-25px -65px; }
+  &.icon_checkmark_transparent{ background-position: -45px -65px; }
+  &.icon_checkmark_special { background-position: -65px -65px; }
+}
+
+.icon_search{  background-position: 0 -80px; }
+.icon_search_white{ background-position:-20px -80px; }
+.icon_search_transparent{ background-position: -40px -80px; }
+
+.icon_home{  background-position: 0 -80px; }
+.icon_home_white{ background-position:-20px -80px; }
+.icon_home_transparent{ background-position: -40px -80px; }
+
+.icon_eye{  background-position: 0 -120px; }
+.icon_eye_white{ background-position:-20px -120px; }
+.icon_eye_transparent{ background-position: -40px -120px; }
+
+.icon_bubble{  background-position: 0 -140px; }
+.icon_bubble_white{ background-position:-20px -140px; }
+.icon_bubble_transparent{ background-position: -40px -140px; }
+
+.icon_trash { background-position: 0 -160px; }
+.icon_trash_white{ background-position: -20px -160px; }
+.icon_trash_transparent{ background-position: -40px -160px; }
+
+.icon_reply {background-position: 0 -180px;}
+.icon_reply_white{ background-position:-20px -180px; }
+.icon_reply_transparent{ background-position: -40px -180px; }
+
+.icon_x { background-position: 0 -200px;}
+.icon_x_white{ background-position:-20px -200px;}
+.icon_x_transparent{ background-position: -40px -200px;}
+
+.icon_text, .icon.quikpost, .icon_quikpost{ background-position: 0 -220px; }
+.icon_text_white, .icon_quikpost_white { background-position:-20px -220px; }
+.icon_text_transparent, .icon_quikpost_transparent { background-position: -40px -220px; }
+
+.icon_document, .icon_swfdocument{ background-position: 0 -240px; }
+.icon_document_white, .icon_swfdocument_white{ background-position:-20px -240px; }
+.icon_document_transparent, .icon_swfdocument_transparent{ background-position: -40px -240px; }
+.icon_document_special, .icon_swfdocument_special{ background-position: -60px -240px; }
+
+.icon_video,.icon.video{ background-position: 0 -260px; }
+.icon_video_white{ background-position:-20px -260px; }
+.icon_video_transparent{ background-position: -40px -260px; }
+
+.icon_series, .icon.series{ background-position: 0 -280px; }
+.icon_series_white{ background-position:-20px -280px; }
+.icon_series_transparent{ background-position: -40px -280px; }
+.icon_series_special{ background-position: -60px -280px; }
+
+.icon_spreadsheet{ background-position: 0 -300px; }
+.icon_spreadsheet_white{ background-position:-20px -300px; }
+.icon_spreadsheet_transparent{ background-position: -40px -300px; }
+
+.icon_question, .icon.question { background-position: -0px -320px; }
+.icon_question_white{ background-position:-20px -320px; }
+.icon_question_transparent{ background-position: -40px -320px; }
+.icon_question_special{ background-position: -60px -320px; }
+
+// .icon_series, .icon.series{ background-position: 0 -340px; }
+// .icon_series_white{ background-position:-20px -340px; }
+// .icon_series_transparent{ background-position: -40px -340px; }
+
+.icon_lock{ background-position: 0 -360px; }
+.icon_lock_white{ background-position:-20px -360px; }
+.icon_lock_transparent{ background-position: -40px -360px; }
+
+.icon_person{ background-position: 0 -380px; }
+.icon_person_white{ background-position:-20px -380px; }
+.icon_person_transparent{ background-position: -40px -380px; }
+
+.icon_camera{ background-position: 0 -400px; }
+.icon_camera_white{ background-position:-20px -400px; }
+.icon_camera_transparent{ background-position: -40px -400px; }
+
+.icon_mic{ background-position: 0 -420px; }
+.icon_mic_white{ background-position:-20px -420px; }
+.icon_mic_transparent{ background-position: -40px -420px; }
+
+.icon_envelope{ background-position: 0 -440px; }
+.icon_envelope_white{ background-position:-20px -440px; }
+.icon_envelope_transparent{ background-position: -40px -440px; }
+
+.icon_info, .icon_help{ background-position: 0 -460px; }
+.icon_info_white, .icon_help_white{ background-position:-20px -460px; }
+.icon_info_transparent, .icon_help_transparent{ background-position: -40px -460px; }
+
+.icon_speaker{ background-position: 0 -480px; }
+.icon_speaker_white{ background-position:-20px -480px; }
+.icon_speaker_transparent{ background-position: -40px -480px; }
+
+.icon_paperclip{ background-position: 0 -500px; }
+.icon_paperclip_white{ background-position:-20px -500px; }
+.icon_paperclip_transparent{ background-position: -40px -500px; }
+
+.icon_download{ background-position: 0 -520px; }
+.icon_download_white{ background-position:-20px -520px; }
+.icon_download_transparent{ background-position: -40px -520px; }
+
+.icon_pie-chart{ background-position: 0 -540px; }
+.icon_pie-chart_white{ background-position:-20px -540px; }
+.icon_pie-chart_transparent{ background-position: -40px -540px; }
+
+.icon_clock{ background-position: 0 -560px; }
+.icon_clock_white{ background-position:-20px -560px; }
+.icon_clock_transparent{ background-position: -40px -560px; }
+
+.icon_plus{ background-position: 0 -580px; }
+.icon_plus_white{ background-position:-20px -580px; }
+.icon_plus_transparent{ background-position: -40px -580px; }
+
+.icon_plus_text {
+  background: none;
+  height: auto;
+  width: auto;
+}
+
+.icon_small {
+  &.icon_plus{ background-position: -5px -605px; }
+  &.icon_plus_white{ background-position:-25px -605px; }
+  &.icon_plus_transparent{ background-position: -45px -605px; }
+}
+
+.icon_minus{ background-position: 0 -620px; }
+.icon_minus_white{ background-position:-20px -620px; }
+.icon_minus_transparent{ background-position: -40px -620px; }
+
+.icon_small {
+  &.icon_minus{ background-position: -5px -645px; }
+  &.icon_minus_white{ background-position:-25px -645px; }
+  &.icon_minus_transparent{ background-position: -45px -645px; }
+}
+
+.icon_create{ background-position: 0 -660px; }
+.icon_create_white{ background-position:-20px -660px; }
+.icon_create_transparent{ background-position: -40px -660px; }
+
+.icon_image, .icon.image { background-position: 0 -680px; }
+.icon_image_white{ background-position:-20px -680px; }
+.icon_image_transparent{ background-position: -40px -680px; }
+
+.icon_page-up{ background-position: 0 -700px;  }
+.icon_page-up_white{ background-position:-20px -700px;  }
+.icon_page-up_transparent{ background-position: -40px -700px;  }
+
+.icon_page-down{ background-position: 0 -720px; }
+.icon_page-down_white{ background-position:-20px -720px; }
+.icon_page-down_transparent{ background-position: -40px -720px; }
+
+.icon_zoom-out{ background-position: 0 -740px;  }
+.icon_zoom-out_white{ background-position:-20px -740px;  }
+.icon_zoom-out_transparent{ background-position: -40px -740px;  }
+
+.icon_zoom-in{ background-position: 0 -760px;  }
+.icon_zoom-in_white{ background-position:-20px -760px;  }
+.icon_zoom-in_transparent{ background-position: -40px -760px;  }
+
+.icon_fullscreen{ background-position: 0 -780px;  }
+.icon_fullscreen_white{ background-position:-20px -780px;  }
+.icon_fullscreen_transparent{ background-position: -40px -780px;  }
+
+.icon_printer{ background-position: 0 -800px;  }
+.icon_printer_white{ background-position:-20px -800px;  }
+.icon_printer_transparent{ background-position: -40px -800px;  }
+
+.icon_close { background-position: 0 -820px;  }
+.icon_close_white{ background-position: -20px -820px;  }
+.icon_close_transparent{ background-position: -40px -820px;  }
+
+.icon_link, .icon_weblink { background-position: 0 -840px; }
+.icon_link_white, .icon_weblink_white{ background-position: -20px -840px; }
+.icon_link_transparent, .icon_weblink_transparent{ background-position: -40px -840px; }
+
+.icon_groups{ background-position: 0 -860px; }
+.icon_groups_white{ background-position: -20px -860px; }
+.icon_groups_transparent{ background-position: -40px -860px; }
+
+.icon_grabber { background-position: 0 -880px; &:hover { cursor: move !important; } }
+.icon_grabber_white { background-position: -20px -880px; &:hover { cursor: move !important; } }
+.icon_grabber_transparent { background-position: -40px -880px; &:hover { cursor: move !important; } }
+
+.icon_linkedin { background-position: 0 -900px;  }
+.icon_linkedin_white{ background-position: -20px -900px; }
+.icon_linkedin_transparent{ background-position: -40px -900px;  }
+
+.icon_twitter { background-position: 0 -920px;  }
+.icon_twitter_white{ background-position: -20px -920px; }
+.icon_twitter_transparent{ background-position: -40px -920px;  }
+
+.icon_facebook { background-position: 0 -940px;  }
+.icon_facebook_white{ background-position: -20px -940px; }
+.icon_facebook_transparent{ background-position: -40px -940px;  }
+
+.icon_dropdown { background-position: 0 -960px;  }
+.icon_dropdown_white{ background-position: -20px -960px;  }
+.icon_dropdown_transparent{ background-position: -40px -960px;  }
+
+.icon_down { background-position: 0 -980px;  }
+.icon_down_white{ background-position: -20px -980px;  }
+.icon_down_transparent{ background-position: -40px -980px;  }
+
+.icon_up { background-position: 0 -1000px;  }
+.icon_up_white{ background-position: -20px -1000px;  }
+.icon_up_transparent{ background-position: -40px -1000px;  }
+
+.icon_left { background-position: 0 -1020px; }
+.icon_left_white{ background-position: -20px -1020px; }
+.icon_left_transparent{ background-position: -40px -1020px; }
+
+.icon_right { background-position: 0 -1040px;  }
+.icon_right_white{ background-position: -20px -1040px;  }
+.icon_right_transparent{ background-position: -40px -1040px;  }
+
+.icon_category { background-position: 0 -1060px; }
+.icon_category_white{ background-position: -20px -1060px; }
+.icon_category_transparent{ background-position: -40px -1060px; }
+
+.icon_tag { background-position: 0 -1080px;  }
+.icon_tag_white{ background-position: -20px -1080px;  }
+.icon_tag_transparent{ background-position: -40px -1080px;  }
+
+.icon_upload { background-position: 0 -1240px; width: 26px; }
+.icon_upload_white{ background-position: -40px -1240px; width: 26px;  }
+.icon_upload_transparent{ background-position: -80px -1240px; width: 26px;  }
+
+.icon_cursor { background-position: 0 -1260px;  }
+.icon_cursor_white{ background-position: -20px -1260px;  }
+.icon_cursor_transparent{ background-position: -40px -1260px;  }
+
+.icon_paintbrush { background-position: 0 -1280px;  }
+.icon_paintbrush_white{ background-position: -20px -1280px;  }
+.icon_paintbrush_transparent{ background-position: -40px -1280px;  }
+
+.icon_actions { background-position: 0 -1300px;  }
+.icon_actions_white{ background-position: -20px -1300px;  }
+.icon_actions_transparent{ background-position: -40px -1300px;  }
+
+.icon_cam { background-position: 0 -1320px;  }
+.icon_cam_white{ background-position: -20px -1320px;  }
+.icon_cam_transparent{ background-position: -40px -1320px;  }
+
+.icon_upload-file { background-position: 0 -1320px; @extend .icon_gigantic;}
+.icon_write-text { background-position: 0 -1400px;  @extend .icon_gigantic;}
+.icon_record-button { background-position: 0 -1480px;  @extend .icon_gigantic;}
+.icon_record-webcam { background-position: 0 -1560px;  @extend .icon_gigantic;}
+.icon_record-screencast { background-position: 0 -1640px;  @extend .icon_gigantic;}
+.icon_web-link { background-position: 0 -1715px;  @extend .icon_gigantic;}
+.icon_record-audio { background-position: 0 -1800px;  @extend .icon_gigantic;}
+
+.icon_card {display: block; float: left; margin: 0 0 0 6px; width: 26px; height: 19px; overflow: hidden; text-indent: -100000px;}
+.icon_visa {background-position: -1px -2040px; @extend .icon_card;}
+.icon_mastercard {background-position: -32px -2040px; @extend .icon_card;}
+.icon_amex {background-position: -63px -2040px; @extend .icon_card;}
+.icon_discover {background-position: -94px -2040px; @extend .icon_card;}
+
+.icon_download-misc_file { background-position: 0 -1322px; @extend .icon_gigantic;}

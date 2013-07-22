@@ -1,0 +1,513 @@
+/*
+Field
+
+Styleguide 13.0
+*/
+
+
+.input_text, .input_textarea {
+  @include box-sizing(border-box);
+  width: 100%;
+  padding: 0 0 0 6px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top-color: #aaa;
+  color: #333;
+  background-color: #eee;
+  -webkit-appearance: none;
+  resize: none;
+  outline: 0;
+  @include background-image(linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,.7) 100%));
+  @include box-shadow(inset 0 1px 3px rgba(0,0,0, 0.2), 0 1px 0 rgba(255,255,255, 0.3));
+  border-radius: 4px;
+  @include transition(border-color .2s linear, box-shadow .2s linear, background-color .2s linear);
+}
+
+.input_text:hover,.input_textarea:hover {
+  border-color: #999;
+}
+
+.input_text:focus,.input_textarea:focus {
+  color: #222; 
+  -webkit-appearance: none;
+  resize: none;
+  outline: 0;
+  background-color: #fff;
+  border-color: $linkblue;
+  @include box-shadow(0 0 5px rgba(85, 129, 211, 0.5));
+}
+
+.input_textarea {
+  display: block;
+  padding: 6px 12px;
+}
+
+.input_checkbox {}
+
+.input_file {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+
+// Input text sizes
+.input_text {
+  height: 40px;
+  line-height:40px; //ie8
+}
+.input_text_small {
+  font-size: .86666em;
+  height: 26px;
+  line-height: 26px;
+}
+.input_text_medium {
+  height: 32px;
+  line-height: 32px;
+}
+
+.input_overflow {
+  overflow-y: auto;
+  max-height: 150px;
+}
+
+.input_textarea-expand {
+  overflow-y: auto;
+  height: 40px;
+  @include transition(height .2s linear);
+    &:focus{height: 120px;}
+}
+
+.input_textarea-expand_height_80 { 
+  overflow-y: auto; 
+  height: 80px; 
+    &:focus{height: 200px;}
+  }
+.input_textarea-expand_height_160 { 
+  overflow-y: auto; 
+  height: 160px; 
+    &:focus{height: 300px;}
+}
+
+.input_textarea_medium {
+  height: 32px;
+  padding: 7px 8px;
+}
+
+.input_textarea_height_60 { overflow-y: auto; height: 60px;}
+.input_textarea_height_100 { overflow-y: auto; height: 100px;}
+.input_textarea_height_200 { overflow-y: auto; height: 200px;}
+.input_textarea_height_300 { overflow-y: auto; height: 300px;}
+
+.input_textarea_max-height_100 { overflow-y: auto; max-height: 100px;}
+.input_textarea_max-height_200 { overflow-y: auto; max-height: 200px;}
+.input_textarea_max-height_300 { overflow-y: auto; max-height: 300px;}
+
+
+
+
+// Input colors
+.input_dark {
+  border-color: #111;
+  border-top-color: #000;
+  background-color: #32363d;
+  color: #aaa;
+  text-shadow: 0 1px 0 rgba(0,0,0,.8);
+  @include box-shadow(inset 0 1px 3px rgba(0,0,0, 0.5), 0 1px 0 rgba(255,255,255, 0.2));
+  @include background-image(linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,.05) 100%));
+  &:hover {border-color: #000;background-color:#424247;}
+  &:focus{color: #eee; border-color: #000; background-color: #49494c; @include box-shadow(0 0 5px rgba(255,255,255, 0.4));}
+}
+
+.input_dark::-webkit-input-placeholder,.input_dark::-moz-placeholder, .input_dark::-input-placeholder {
+  color: #fff;
+  opacity: .5;
+  text-shadow: 0 1px rgba(0,0,0,.8);
+}
+
+.input_dark:focus::-webkit-input-placeholder,.input_dark:focus::-moz-placeholder, .input_dark:focus::-input-placeholder {
+  opacity: .2;
+}
+
+.input_text_plain {
+  border: none;
+  background: none transparent;
+  min-height: 1.2em;
+  height: auto;
+  line-height: 1.2em;
+  padding: 0;
+  text-shadow: none;
+  @include box-shadow(none);
+  &:focus {
+    background: none transparent;
+    @include box-shadow(none);
+    outline: none;
+  }
+}
+
+.input_text_plain_inverted {
+  color: #fff;
+}
+
+.input_text_plain_inverted::-webkit-input-placeholder,.input_text_plain_inverted::-moz-placeholder, .input_text_plain_inverted::-input-placeholder {
+  color: #fff;
+  opacity: .5;
+  text-shadow: none;
+}
+
+.input_text_plain_inverted:focus::-webkit-input-placeholder,.input_text_plain_inverted:focus::-moz-placeholder, .input_text_plain_inverted:focus::-input-placeholder {
+  opacity: .2;
+}
+
+.input_text_plain_small {
+  font-size: 14px;
+}
+
+.input_textarea_plain {
+  @extend .input_text_plain;
+  -webkit-appearance: none;
+  resize: none;
+}
+
+.input_textarea_plain_inverted::-webkit-input-placeholder,.input_textarea_plain_inverted::-moz-placeholder, .input_textarea_plain_inverted::-input-placeholder {
+  color: #fff;
+  opacity: .5;
+  text-shadow: none;
+}
+
+.input_textarea_plain_inverted:focus::-webkit-input-placeholder,.input_textarea_plain_inverted:focus::-moz-placeholder, .input_textarea_plain_inverted:focus::-input-placeholder {
+  opacity: .2;
+}
+
+.input_textarea_plain_inverted {
+  @extend .input_text_plain_inverted;
+}
+
+
+
+
+.field {
+  @extend .cf;
+  position: relative;
+}
+
+.field_40 {
+  height: 40px; 
+  line-height: 40px;
+  .field__label {margin: 0;}
+}
+
+.field_32 {
+  height: 32px; 
+  line-height: 32px;
+  .field__label {margin: 0;}
+}
+
+.field_40_textarea {
+  line-height: 40px;
+}
+
+.field_textarea {
+  height: auto;
+  line-height: normal;
+}
+
+.field_stacked {
+  @extend .cf;
+  height: auto;
+  line-height: 1.1em;
+}
+
+.field_small {
+  @extend .input_text_small;
+  line-height: 26px;
+}
+
+.field_medium {
+  @extend .input_text_medium;
+  line-height: 32px;
+}
+
+.input_text_large {
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.13333em;
+}
+
+.field_large {
+  @extend .input_text_large;
+  line-height: 60px;
+}
+
+
+.field_textarea{
+  height: auto;
+  line-height: normal;
+}
+
+
+.field_stacked {
+  @extend .cf;
+  height: auto;
+  line-height: 1.1em;
+}
+
+.field .field__icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin-top: -10px !important;
+}
+
+
+
+
+.field_single .input_text {
+  padding-right: 80px;
+}
+
+.field_single .button {
+  width: 72px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.field_icon .input_text {
+  padding-left: 32px;
+}
+
+
+
+.field_bar {
+  height: auto;
+  line-height: inherit;
+  padding: .3em;
+  background-color: #cbced6;
+  border: 1px solid #a1a5ae;
+  border-bottom-color: #7d8391;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15));
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%));
+  vertical-align: middle;
+}
+
+
+.field__label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.field__label_inside {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  line-height: 40px;
+  font-size: 1em;
+  padding-left: 7px;
+  @include opacity(.7);
+  z-index:1;
+}
+
+.no-opacity {
+  .field__label_inside, .field__label_inside-textarea {
+    filter: none;
+  }
+}
+
+.field__label_inside-textarea {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  line-height: normal;
+  padding: 7px 12px;
+  font-size: 1em;
+  @include opacity(.7);
+  z-index:1;
+}
+
+.infield {
+  color: #666; 
+  text-shadow: 0 1px 0 rgba(255,255,255,.8); 
+}
+
+
+
+
+.field_stacked {
+  .field__label {
+    @extend .cf;
+  }
+}
+
+.field__label-title {
+  float: left;
+  display: block;
+}
+
+
+
+
+.field__label_required {
+  .field__label-title {
+    font-weight: bold;
+  }
+}
+
+.field__label-action {
+  float: right;
+  display: block;
+}
+
+.field__label-action-item {
+  float: left;
+  display: block;
+  border-bottom: 1px solid #666;
+  color: #000;
+  @include opacity(.5);
+  font-size: .85em;
+  &:hover{color: #000; opacity:.4;}
+}
+
+.field_clearable {
+  .input_text {padding-right:2em;}
+  .field__clear-button {
+    position:absolute;
+    right:.8em;
+    top:50%;
+    margin-top:-10px;
+    .icon{margin-right:0;}
+  }
+}
+
+.field_checkbox{
+  @extend .cf;
+  .field__label {float:left;display:inline;}
+  .field__input {float:left;margin-right:.4em;}
+}
+
+.field_site-search {
+  @extend .field_32;
+  @extend .field_icon;
+  width: 312px;
+  .input_text {
+    @extend .input_text_medium;
+    @extend .border_dark;
+    background-image: none;
+    background-color: #fff;
+    background-color: rgba(255,255,255,.8);
+    &:focus {
+      background-color: #fff;
+      @include box-shadow(0 0 5px rgba(255,255,255, 0.5));
+    }
+  }
+}
+
+
+.field_check {
+  .field__input {
+    width: auto;
+    display: inline-block;
+  }
+  .field__label {
+    display: inline-block;
+  }
+}
+
+.field_plain {
+  border-bottom: 1px solid #ccc;
+  display: block;
+  min-height: 40px;
+  @extend .cf;
+  .list {
+    margin: 0;
+  }
+  .list__item {
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 4px;
+    &:hover{
+      text-decoration: line-through;
+    }
+    &.is-disabled:hover {
+      text-decoration: none;
+    }
+  }
+  .list__link {
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 98px;
+  }
+  .list__link_remove {
+    display: block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .field__icon {
+    left: 0;
+    position: absolute;
+    top: 0;
+    display: block;
+    margin: 9px !important;
+  }
+  .input_textarea {
+    width: auto;
+    padding: 12px 0;
+    margin-left: 38px;
+  }
+  .input_text {
+    width: 102px;
+  }
+  .not_valid {
+    -webkit-animation: shake 1s 1;
+  }
+}
+
+// Hacks
+.field_billing {
+  label {display: block; font-weight: bold;}
+  select {
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #a1a5ae;
+    border-bottom-color: #7d8391;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    height: 40px;
+    outline: 0;
+    -webkit-appearance: none;
+    font-size: .8666em;
+    padding: 0 24px 0 8px;
+    background: image-url("no-repeat.png") right -3731px no-repeat,
+                image-url("no-repeat.png") 0 -3785px repeat-x, #cbced6;
+    @include box-sizing(border-box);
+    @include fontstack;
+    @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15));
+  }
+}
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .field_billing select {
+    background: image-url("no-repeat-2x.png") right -3731px no-repeat,
+                image-url("no-repeat-2x.png") 0 -3785px repeat-x, #cbced6;
+    background-size: 200px 3816px;
+  }
+}

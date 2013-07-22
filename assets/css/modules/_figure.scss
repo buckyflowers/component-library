@@ -1,0 +1,415 @@
+/*
+Figure
+
+.figure_avatar - used for images
+.figure_avatar_nav-bar - used for the avatar in the user nav bar
+
+Styleguide 2.0
+*/
+
+.figure {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  .figure__image {
+    display: block;
+    width: 100%;
+    @include bf-box-sizing('border-box');
+  }
+  .figure__body {
+    display: block;
+    position: relative;
+    .time{
+      position: absolute;
+      bottom: 0px;
+    }  
+  }
+  .figure__details {
+    display: block;
+    width: auto;
+    z-index: 2;
+    position: absolute;
+    bottom: .5em;
+    right: .5em;
+    height: 27px;
+    width: 27px;
+    line-height: 28px;
+    background: #fff;
+    font-size:.8666em;
+    color: #777;
+    font-style: normal;
+    @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+    border-radius: 2px;
+    .figure__media-type {
+      @include opacity(.7);
+      margin: 4px !important;
+      float: right;
+      overflow: hidden;
+      text-indent: -10000px;
+    }
+  }
+}
+
+// sizes
+.figure_16 {width: 16px;}
+.figure_20 {width: 20px;}
+.figure_26 {width: 26px;}
+.figure_32 {width: 32px;}
+.figure_48 {width: 48px;}
+.figure_60 {width: 60px;}
+.figure_80 {width: 80px;}
+.figure_120 {width: 120px;}
+.figure_180 {width: 180px;}
+.figure_full {width: 100%;}
+
+// borders
+
+//modifiers
+.figure_thumb {
+  width: 144px;
+}
+
+
+
+
+.figure_middle {
+  margin-top: -.3em;
+}
+
+
+
+.figure_avatar {
+  position: relative;
+  border-radius: 4px;
+  .figure__image {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    @include box-shadow( 0 1px 3px rgba(0,0,0,.15));
+  }
+  .figure__body:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 4px;
+    @include box-shadow( inset 0 0 0 1px rgba(0,0,0,.3));
+  }
+}
+
+.figure_avatar_nav-bar {
+   margin-right: 1px\9;
+   @extend .figure_32;
+   @extend .figure_avatar;
+   .figure__image {@include box-shadow(inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.2))}
+   .figure__body:before {@include box-shadow( inset 0 0 0 1px rgba(0,0,0,.9));}
+}
+
+.no-opacity {
+  // this is a hack to force the navbar avatar to the correct position in IE8. would be better to do a browser sniff but that's a whole new ball of wax
+  // and we don't have the cycles or go ahead to implement such a feature in this iteration. if this gives us trouble, refactor into a browser sniffer that
+  // applies a class to the html or body tag, ala ExtJS. -- SAM, 2012/11/07
+  .figure_avatar_nav-bar {
+    .figure__image {
+      position: absolute;
+      top: -14px;
+    }
+  }
+}
+
+.figure_avatar_inset {
+  .figure__image {
+    @include box-shadow( 0 1px 3px rgba(0,0,0,.15));
+    border-radius: 4px;
+
+    &.no_rounded_right{
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+  }
+}
+
+.figure_avatar_small {
+  @extend .figure_avatar;
+  .figure__image {
+    @include box-shadow(inset 0 0 2px 1px rgba(0,0,0,.50), 0 1px 3px rgba(0,0,0,.15));
+    border-radius: 4px;
+
+    &.no_rounded_right{
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+  }
+}
+
+.figure_avatar_small {
+  @extend .figure_avatar;
+  .figure__image {
+    @include box-shadow(inset 0 0 2px 1px rgba(0,0,0,.50), 0 1px 3px rgba(0,0,0,.15));
+    border-radius: 4px;
+  }
+}
+
+
+
+
+.figure_frame { 
+  padding: 3px;
+  border-radius: 2px;
+  @include box-shadow( 0 1px 3px rgba(0,0,0,.15));
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  background: #fff;
+  // Generates the inner shadow
+  .figure__body:before {
+    content:"";
+    display: block;
+    z-index: 1; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include box-shadow(inset 0 0 2px 1px rgba(0,0,0,.40));
+  }
+  .figure__details { 
+    bottom: -3px; right: -3px; 
+    border-radius: 2px;
+    @include box-shadow(-2px -2px 2px -1px rgba(0,0,0,.20));
+  }
+  .figure__details_full { 
+    bottom: -3px;
+    display:block;
+    width: 100%;
+    left: auto;
+    border-radius: 0;
+    right: auto;
+    background-color:#ffffff;
+    @include box-shadow(0px 2px 2px -2px rgba(0, 0, 0, 0.2));
+  }
+  .figure__details_full-overlay { 
+    top: -3px;
+    display:block;
+    width: 100%;
+    left: auto;
+    border-radius: 0;
+    right: auto;
+    background-color:#ffffff;
+    background-color:rgba(255,255,255,.8);
+    @include box-shadow(0px 2px 2px -2px rgba(0, 0, 0, 0.2));
+  }
+  &:hover {
+    border-color: #6091ec;
+  }
+}
+
+
+
+
+.figure_frame_thin {
+  // Generates the inner shadow
+  @include box-shadow( 0 1px 3px rgba(0,0,0,.15));
+  .figure__body:before {
+    content:"";
+    display: block;
+    z-index: 1; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include box-shadow(inset 0 0 2px rgba(0,0,0,.40));
+  }
+  .figure__body{
+    border: 1px solid #fff;
+  }
+  .figure__details { 
+    bottom: 0; right: 0;
+    border-radius: 2px 0 0 0;
+    @include box-shadow(-2px -2px 1px -1px rgba(0,0,0,.20)); 
+  }
+}
+
+.figure_simple-dark {
+  border-radius: 4px;
+  overflow: hidden;
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+  .figure__body:before{
+    content:"";
+    display: block;
+    z-index: 1; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.80));
+  }
+  .figure__details { 
+    border-radius: 0;
+    background-color: transparent;
+    width: 100%;
+    top: 0; 
+    left: 0;
+    padding: 10px 3px 10px 6px;
+    @include box-shadow(none); 
+  }
+  &.with-overlay {
+    .figure__body:before{
+      @include background-image(linear-gradient( rgba(30, 34, 52, .4) 22%, rgba(0, 0, 0, 0) 56%));
+    }
+  }
+}
+
+.figure_simple {
+  @extend .figure_simple-dark;
+  .figure__body:before{
+    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.30));
+  }
+}
+
+.figure_post{
+  display: inline-block;
+  max-width: 816px;
+  text-align: center;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid rgba(0,0,0,.3);
+  }
+  .figure__image {
+    max-width: 100%;
+    display: inline-block;
+    width: auto;
+    vertical-align: bottom;
+  }
+}
+
+
+
+.figure_frame_stack {
+  @extend .figure_frame;
+  display: block;
+  @include box-shadow(0 2px 0 -1px white,0 2px 0 0 #CCC,0 2px 1px rgba(0, 0, 0, 0.1),0 4px 0 -1px white,0 4px 0 0 #CCC,0 4px 1px rgba(0, 0, 0, 0.1));
+}
+
+
+
+.figure_featured_overlap {
+  z-index: 1;
+  .figure__details {   
+    bottom: .5em;
+    right: .5em;
+    border-radius: 2px;
+    @include box-shadow(0 1px rgba(0,0,0,.3));
+  }
+  .inner-shadow {
+    @include box-shadow(none);
+    background: image-url("home/featured-gradient.png") no-repeat;
+    background-size: 100%;
+  }
+}
+
+
+
+.figure_question-mark {
+  display: block;
+  border: 1px solid;
+  padding: 3px;
+  border-radius: 2px;
+  @extend .bg_4;
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -11px;
+    margin-left: -14px;
+    background: #d6f987;
+    border: 1px solid #7fa84e;
+    border-left: none;
+    border-top: none;
+    width: 20px;
+    height: 20px;
+    @include transform(rotate(45deg)); 
+    @include box-shadow(2px 2px 2px rgba(0,0,0,.1)); 
+    display: none\9;
+  }
+}
+
+.figure_user-thumb {
+  border: 1px solid;
+  border-radius: 2px;
+  @extend .bg_5;
+  @include box-shadow( 0 1px 3px rgba(0,0,0,.15));
+}
+
+
+/*
+Avatar Example [.figure_avatar_example] - used for onboarding and for free trial
+
+Styleguide 2.1
+*/
+
+
+.figure_avatar_example {
+  .figure__body {
+    padding:1px;
+    @include box-shadow(none);
+    border:1px dashed #b7b7b7;
+    border-radius: 4px;
+  }
+  .figure__image {
+    border-radius: 4px;
+    @include opacity(.45);
+  }
+}
+
+
+
+
+
+.no-opacity {
+  .figure__details {
+    .figure__media-type {
+      filter: none !important;
+    }
+  }
+}
+
+
+.figure__stats {
+  position: relative;
+  float: left;
+  height: 27px;
+  padding: 0 4px;
+  border-right: 1px solid #bbb;
+  font-size: .7em;
+}
+
+
+.figure__stat-item {
+  position: relative;
+  z-index: 1;
+  padding: 0 3px;
+  float: left;
+}
+
+
+
+
+// stuff that needs to be refactored
+.course_item {
+  .figure__stat-item .icon {margin-right: 0;}
+}
+

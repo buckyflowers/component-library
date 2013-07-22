@@ -1,0 +1,602 @@
+/*
+Box (.box) Good for modules that have a header and body and possibly footer
+
+Styleguide 17.0
+*/
+
+
+.box {
+  text-align:left;
+  position:relative;
+  display: block;
+	margin-bottom:$space;
+	border: 1px solid #ccc;
+	background: #fff;
+  border-radius: 4px;
+	@include box-shadow(0 1px 3px rgba(0,0,0,.15));
+}
+  .box__header{
+    padding:.8em .8em 0;
+    border-radius: 4px 4px 0 0;
+  }
+  .box__body{padding:.8em;@extend .cf;}
+  .box__footer{
+    padding:.8em;
+    margin: 0 -1px -1px -1px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    @extend .bg_7;
+    @extend .cf;
+  }
+
+
+
+
+// Author badge
+.box_author-badge {
+  @extend .box_rounded;
+  p {margin: 0 0 12px 0;}
+}
+
+.box_example {
+  background: #DBE7FB;
+  border: 1px dashed #B2CCFD;
+  @include box-shadow(none);
+}
+
+  .box_example__action {
+    float: left;
+    display: block;
+  }
+
+  .box_example__text {
+    float: left;
+    display: block;
+    margin-left: .4em;
+    line-height: 40px;
+    @include opacity(.5);
+    font-weight: bold;
+  }
+
+
+
+
+// Marketing Message
+.box_marketing-message {}
+
+  .box_marketing-message__figure {
+    width: 15.6666666%;
+    margin-right: .8em;  
+  }
+
+  .box_marketing-message__description p {
+    margin-bottom: .4em;
+  }
+
+  .box_marketing-message__cta {
+    width: 33.4%;  
+    text-align: center;
+    margin-left: .8em;  
+    .button {display: block;}
+  }
+
+  .box_marketing-message__cta-wrapper {
+    margin: -.8em -.8em -.8em 0;
+    padding: .8em;
+    border-left: 1px solid #ccc;
+    height: 109px;
+    background: #eee;
+    border-radius: 0 4px 4px 0;
+  }
+
+// User stats box
+.box_user-stats {
+  @extend .bg_7;
+  @extend .bg_inset;
+  @extend .box_rounded;
+}
+
+  .box_user-stats__chart {
+    float: left;
+    margin: .8em;
+  }
+
+  .box_user-stats__stats {
+    float: right;
+    width: 50%;
+    @extend .cf;
+  }
+
+  .box_user-stats__stat-item {
+    text-align: center;
+    float: left;
+    display: block;
+    width: 50%;
+    height: 160px;
+    border-left: 1px solid #ccc;
+    @include box-sizing(border-box);
+  }
+
+  .box_user-stats__stat-item__header {
+    margin-top: 32px;
+    font-size: 5em;
+    line-height: 1em;
+    
+  }
+
+  .box_user-stats__stat-item__body{
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+
+.box_sidebar {
+  border: none;
+  background: transparent;
+  @include box-shadow(none);
+  margin-bottom:.8em;
+  padding-bottom:.8em;
+  border-bottom:1px solid #ccc;
+  .box__header{
+    padding:0 0 8px;
+    font-size:.866667em;
+    line-height:1em;
+    font-weight:bold;
+  }
+  .box__view-all {font-weight:normal;}
+  .box__body{padding:0;}
+  .box__list{font-size:.866667em;line-height:1em;margin-bottom:.9230em;}
+}
+.box_sidebar_dashed {
+  @extend .box_sidebar;
+  border-bottom:1px dashed #ccc;
+}
+.box_sidebar_no-border {
+  @extend .box_sidebar;
+  border-bottom: 0;
+}
+
+
+
+.box_linkedin {
+  background-image: url(/images/linkedin-bg-logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 25px;
+}
+
+
+
+.box_pricing {
+  .box__body {
+    padding: 4.8em 0;
+  }
+  .box_pricing__plans {
+    padding: 4.8em 4.8em 1.6em 4.8em;
+    @extend .c;
+    @extend .c_nested;
+  }
+  .box__body__section {
+    margin-bottom: -1px;
+    border-top: 1px solid #ddd;
+    padding-top: 4em;
+  }
+  img {display: block;}
+}
+
+.box_plan {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  background: #fff;
+  color: #555;
+  border: none;
+  @include box-shadow(none);
+  border-radius: 4px;
+  .box__header {
+    margin: 0;
+    padding: 1.6em 0 0 0;
+    font-weight: bold;
+  }
+  .box__body { padding: .8em 1.2em 1.2em 1.2em;}
+  .box_plan__user-count {
+  }
+  .box__footer {
+    margin: 0;
+    border: none;
+    @include box-shadow(none);
+    background: #eee;
+    border-radius: 0 0 4px 4px;
+    .button {@extend .button_full;}
+  }
+}
+
+.box_plan_add:before {
+  content: "+";
+  position: absolute;
+  top: 33%;
+  left: -15px;
+  font-weight: bold;
+}
+.box_plan_total:before {
+  content: "=";
+  position: absolute;
+  top: 33%;
+  left: -15px;
+  font-weight: bold;
+}
+
+.box_plan_link {
+  background: #ebf3ff;
+  color: #5e6165;
+  .box__footer {background: #dbe7fb;}
+  &:hover {
+    @include transition(all .2s linear);
+    position: relative;
+    height: 100%;
+    margin-top: -.8em;
+    background: #ecffc0;
+    color: #5b6446;
+    .box__footer {
+      @include transition(all .2s linear);
+      margin-top: .8em;
+      background: #dffaa4;
+      .button {@extend .button_primary;}
+    }
+  }
+}
+
+.box_plan_link-role {
+  background: #eee;
+  color: #555;
+  .box__footer {background: #ddd;}
+  .box_plan__user-count {
+    margin-left: 0;
+    height: 96px;
+    line-height: 28px;
+    font-size: 1.6em;
+  }
+}
+
+
+.box_plan_total {
+  background: #ecffc0;
+  color: #5b6446;
+  .box__footer {background: #dffaa4;}
+}
+
+.box_pricing_roles {
+  padding: 1.6em 4.8em;
+  background: #ddd;
+  border-radius: 4px;
+  @extend .cf;
+  .box_plan {
+    .box__footer {
+      height: 40px;
+      line-height: 40px;
+    }
+    &.box_plan_total {
+      .box__footer {
+        line-height: 1.2em;
+      }
+    }
+  }
+}
+
+.box_credit-card {
+  margin: 0 140px;
+  @extend .box_rounded;
+  @extend .bg_5;
+  position: relative;
+  .box__header {
+    padding: 1.6em 1.6em 0 1.6em;
+  }
+  .box__body {
+    padding: .8em 1.6em 1.6em 1.6em;
+  }
+  .button, .input_text, select {@extend .bg_5__item}
+  .field_with_errors {display: inline-block;}
+  .error {color: #ef4d4d;}
+}
+
+.box__credit-card__card-icons {
+  position: absolute;
+  top: 1.6em;
+  right: 1.6em;
+}
+
+
+
+.box_billing-details {
+  @extend .box_rounded;
+}
+
+.box_calculator {
+  &> .box__header {
+    margin: 12px;
+    padding: 12px;
+    background: #eee;
+    border-radius: 4px;
+  }
+  .box__header__subheading {
+    margin: 12px -12px -12px -12px;
+    text-transform: uppercase;
+    font-size: .666em; //10px
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 19px;
+    height: 18px;
+    background: #ddd;
+    color: #777;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+  }
+  .box__header__heading {
+    text-align: right;
+    
+    font-size: 4em;
+    line-height: 1em;
+    height: 50px;
+  }
+  &> .box__body{padding: 0;}
+}
+
+.box_calculator-input {
+  @extend .cf;
+  @include box-shadow(none);
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  .box__body {
+    float: left;
+    width: 75%;
+    @include box-sizing(border-box);
+  }
+  .box__footer {
+    float: right;
+    width: 25%;
+    margin: 0;
+    border: none;
+    @include box-shadow(none);
+    @include box-sizing(border-box);
+  }
+}
+
+
+.box_add {
+  @extend .box_rounded;
+  @include box-shadow(none);
+  .box__header {
+    padding: 1.6em 1.6em 0;
+  }
+  .box__heading {
+    margin-bottom:1em;
+    
+    @extend .normal;
+    font-weight:bold;
+  }
+  .box__body{
+    padding: 1.6em;
+    min-height:136px;
+    .indicator {display:none;}
+  }
+  .box__body.state_loading{
+    .indicator {display:block;}
+  }
+  .box__footer {
+    @include box-shadow(none);
+  }
+  .box__footer-actions{
+    float:left;
+    line-height:40px;
+  }
+  .box__footer-actions_right{
+    float:right;
+  }
+  .box__primary-cta {
+    width:165px;
+  }
+}
+
+
+.box_added {
+  @extend .box_rounded;
+  .box__footer {
+    @include box-shadow(none);
+    @include background-image(none);
+    border:none;
+    background-color:transparent;
+    position: absolute;
+    right:-66px;
+    top:0;
+    width:60px;
+    padding:0;
+    @include opacity(0);
+    @include transition(opacity .5s ease-out);
+  }
+  .box__footer-actions .button{
+    float:none;
+    line-height:40px;
+    margin-bottom:6px;
+    display:block;
+  }
+}
+.box_added:hover{
+  .box__footer {
+    @include opacity(1);
+  }
+}
+
+.box_author-badge {
+  border-radius: 4px;
+  .author-badge__avatar {
+    margin: -1px 1.6em -1px -1px;
+    .figure__body:before {border-radius: 4px 0 0 4px;}
+    .figure__image {border-radius: 4px 0 0 4px;@include box-shadow(none);}
+  }
+}
+
+.box_dark {
+  @extend .bg_5;
+  .button {
+    @extend .border_dark;
+    @extend .bg_inset;
+  }
+}
+
+// Used on post page for post controls (post button, post options, save indicator)
+.box_post-controls {
+  @extend .box_dark;
+  @extend .box_rounded;
+  .box__body {
+    padding: 6px;
+  }
+  .box__footer {
+    padding: 0 6px 6px 6px;
+    text-align: center;
+    background: none transparent;
+    border: none;
+    font-size: .75em;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+    opacity: .5;
+    @include box-shadow(none);
+  }
+  @extend .no-select;
+}
+
+.box_post-actions {
+  .box__body {
+    padding: 6px;
+  }
+  .button {
+    @extend .bg_inset;
+    @extend .button_full;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  @extend .no-select;
+  @extend .box_rounded;
+}
+
+// Used on post page for inputs in sidebar
+.box_fields {
+  font-size: 14px;
+  .box__body {
+    padding: 0;
+  }
+  .field {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .input_text_plain {
+    height: 1em;
+    line-height: 1em;
+  }
+  .input_textarea_plain {
+    height: auto;
+    line-height: 1em;
+  }
+}
+
+.box_contributor {
+  border: none;
+  background: transparent;
+  @include box-shadow(none);
+  margin: 0 !important;
+  @extend .media;
+  .button {
+    position: absolute;
+    bottom: 0;
+    width: 144px;
+  }
+  .media__block {
+    width: 144px;
+    margin-right: 24px;
+  }
+  .box__body {
+    float: left;
+    width: 66.6666%;
+    padding: 0 12px 0 0;
+  }
+  .box__footer {
+    background: none transparent;
+    border: none;
+    float: left;
+    width: 33.33333%;
+    padding: 0 0 0 12px;
+    @include box-shadow(none);
+  }
+}
+
+.box_contributor-link {
+  border: none;
+  background: transparent;
+  @include box-shadow(none);
+  height: 144px;
+  line-height: 144px;
+  text-align: center;
+  background: #eee;
+  color: #666;
+  font-weight: bold;
+  &:hover{
+    background: #ddd;
+    color: #222;
+  }
+}
+
+.box_playlist-actions {
+  text-align: center;
+  .box__header, .box__body, .box__footer {
+    padding: 0 6px;
+  }
+  .box__header {
+    padding-top: 6px;
+    font-weight: bold;
+  }
+  .box__body {
+    a {
+      display: block;
+      @extend .ellipsis;
+      color: #999;
+      color: rgba(0,0,0,.5);
+      &:hover {
+        color: #aaa;
+        color: rgba(0,0,0,.3);
+      }
+    }
+  }
+  .box__footer {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 6px;
+    @extend .flat;
+  }
+  .button {
+    @extend .bg_inset;
+  }
+}
+
+// HACKS
+.dialogs {display: none;}
+#dialog-marketing_message_content {
+  width: 612px;
+  .inner{
+  .action_buttons{
+    .done{float: right;}
+    }
+  }
+}
+
+.resource_viewer .box_add {
+  margin: -51px -15px -46px -15px;
+}
+
+.ui-autocomplete {
+    width: 100px;
+    max-height: 100px;
+    overflow: scroll;
+  }
