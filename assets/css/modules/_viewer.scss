@@ -1,0 +1,45 @@
+/*
+Viewer
+
+.viewer          - media viewer (videos, docs, etc)
+
+Styleguide 14.0
+*/
+
+.viewer{}
+
+
+.viewer_crocodoc{
+	.viewer__panel {
+	    padding: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    position: absolute;
+	    top: 37px;
+    }
+	.error-overlay {
+		font-family:inherit;
+		.msg {
+			@extend .alert;
+			@extend .alert_error;
+			height: auto;
+			left: 0;
+			margin: 47px 0 0 0;
+			position: relative;
+			top: 0;
+			display:block;
+			width:auto;
+			h3 {
+				font-size:inherit;
+				text-align: left;
+				font-weight:bold;
+			}
+			p {
+				font-size: inherit;
+    			margin: 0;
+    			text-align:left;
+			}
+		}
+	}
+}

@@ -114,7 +114,7 @@ Styleguide 17.0
     width: 50%;
     height: 160px;
     border-left: 1px solid #ccc;
-    @include box-sizing(border-box);
+    @include bf-box-sizing();
   }
 
   .box_user-stats__stat-item__header {

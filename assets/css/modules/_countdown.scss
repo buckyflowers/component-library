@@ -1,0 +1,106 @@
+
+.countdown {
+  margin: 3em 0 -3em 0;
+  position: relative;
+  z-index: 1;
+  padding:10px 0;
+  border: 1px solid #2c56a2;
+  border-left: none;
+  border-right: none;
+  @extend .bg_3;
+  .button {@extend .bg_3__item;}
+}
+
+.countdown-header {
+  margin: 3em 0 -3em 0;
+  position: relative;
+  z-index: 1;
+  padding:10px 0;
+  margin: -1px;
+  border: 1px solid #2c56a2;
+  border-radius: 4px 4px 0 0;
+  @extend .bg_3;
+}
+
+.countdown__main {
+  border:#18191d 1px solid;
+  background-color: #315394;
+  border-radius:5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15) inset, 0pt 1px 0px rgba(255, 255, 255, 0.2);
+  color:#fff;
+  text-align:center;
+  text-shadow:0 1px 1px rgba(0,0,0,0.7);
+}
+
+.countdown__main_small {
+  margin:0 auto;
+  width: 282px;
+  position:relative;
+}
+
+.countdown__main_large {
+  margin: 0 120px;
+  font-size: 2em;
+  line-height: 1em;
+  padding: 18px;
+}
+
+.countdown__header {
+  position: relative;
+  height: 16px;
+  padding: 5px 10px 10px 10px;
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 12px;
+  .countdown__heading {display:inline-block;}
+}
+
+.countdown__body {
+  padding: 0 10px;
+  height: 28px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  em {  font-style: normal; }
+}
+
+.countdown__button {
+  padding: 0 30px;
+  margin-top: -31px;
+  margin-left: 1px;
+  left: 100%;
+  top: 50%;
+  position: absolute;
+  font-size: 23px;
+  width: 156px;
+  height: 60px;
+  border-left: none;
+  line-height: 60px;
+  border-radius: 0 4px 4px 0;
+  @extend .bg_inset;
+  @extend .bg_4;
+}
+
+.countdown__button.countdown__button_vote {
+  font-size: 17px;
+  line-height: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.countdown__support {
+  font-weight: normal;
+  position: absolute;
+  left: -200px;
+  border-right: 0;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 14px 0;
+  width: 180px;
+}
+
+.countdown__support-action {color: #fff; font-size: 18px; display: block;}
+.countdown__support-action:hover {text-decoration: underline; color: #fff}

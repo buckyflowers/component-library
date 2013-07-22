@@ -1,0 +1,607 @@
+/*
+Post (.finder) Good for finding things. Like lost keys.
+
+Styleguide 16.0
+*/
+
+
+.post{
+	position: relative;
+  text-rendering: optimizeLegibility;
+  &:before {
+    position: fixed;
+    height: 100%;
+    width: 816px;
+    content: "";
+    display: block;
+  	background-color: #ffffff;
+    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15));
+  }
+  &.is-scrolled {
+    &:before {
+      top: 0;
+    }
+  }
+  &.is-posted {
+    background-color: #ffffff;
+    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15));
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.post__header{
+	padding: 45px 84px;
+	background-color: #464d57;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 1px rgba(0,0,0,.5);
+  @include transition(all .2s linear);
+  &:before{
+  	content: "";
+  	display: block;
+  	width: 100%;
+  	height: 100%;
+		border: 1px solid rgba(0,0,0,.30);	
+		box-shadow: inset 0 0 0 1px rgba(255,255,255,.2);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+    @include background-image(linear-gradient(-51deg,rgba(15,17,29,.0) 0%,rgba(15,17,29,.2) 50%));
+		@include bf-box-sizing();
+  }
+  &.is-uploaded {
+    background-color: #464d57 !important;
+    .post__header__textarea {
+      text-shadow: 0 1px 0 rgba(0,0,0,.5), 0 0 5px rgba(0,0,0,.2);
+    }
+    .post__header__image {
+      display: block !important;
+      opacity: .5;
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 60px;
+      left: 0;
+      right: 0;
+      top: 246px;
+      position: absolute;
+      @include background-image(linear-gradient( rgba(70, 77, 87, 0) 0%, rgba(70, 77, 87, 1) 100%));
+    }
+  }
+}
+
+.post__title{
+  @extend .giga;
+  font-weight:bold;
+	color: #fff;
+	position: relative;
+	z-index: 3;
+  min-height: 1.25em;
+  line-height: 1.25em;
+  margin-bottom: 12px;
+}
+
+.post__description{
+	font-size:1.13333em;
+	line-height:1.5em;
+	color: #fff;
+	position: relative;
+	z-index: 3;
+  @include fontstack-slab;
+  font-size: 1.3125em;
+  min-height: 1.2em;
+  line-height: 1.2em;
+}
+
+.post__contributors {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  font-style: italic;
+  @include fontstack-slab;
+  margin-bottom: 12px;
+  a {color: #fff; font-weight: bold;}
+}
+
+.post__header__textarea{
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  resize: none;
+  width: 100%;
+  padding: 0;
+  min-height: 1.25em;
+  text-shadow: 0 1px rgba(0,0,0,.5);
+  text-rendering: optimizeLegibility;
+  &:focus {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+  }
+  &.js-autogrow {
+    height: 0;
+  }
+}
+
+.post__header__textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,.5);
+    opacity: .5;
+}
+.post__header__textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,.5);
+    opacity: .5;
+}
+.post__header__textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,.5);
+    opacity: .5;
+}
+.post__header__textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,.5);
+    opacity: .5;
+}
+
+.post__header__image{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 306px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  @include transition(all .2s linear);
+  // -webkit-transform: translate3d(0,0,0);
+  // -webkit-filter: blur(10px); 
+}
+
+.post__body{
+  position: relative;
+	border-top: none;
+	font-size: 1.3125em; // 21px
+	line-height: 1.5em;
+	@include fontstack-slab;
+  padding-bottom: 38px;
+}
+.redactor_air {
+  margin-left: 162px;
+}
+.redactor_editor {
+  margin: -60px -84px;
+  padding: 60px 84px;
+  div {
+    margin-bottom: 1.5em;
+  }
+}
+.redactor_toolbar {
+  height: 40px;
+  border: 1px solid;
+  padding:0;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align:center;
+  font-weight: bold;
+  line-height: 38px;
+  text-decoration: none;
+  border-radius: 4px;
+  @extend .no-select;
+  @include bg_1;
+}
+.redactor_box textarea:focus {
+	background-color: #fff;
+	outline: none;
+}
+body .redactor_air {
+	position: absolute;
+	/*border: 1px solid #ddd;*/
+	border-bottom: none;
+	z-index: 2;
+}
+.redactor_editor, .redactor_editor:focus {
+	position: relative;
+	outline: none;
+	overflow: hidden;
+	white-space: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+.redactor_toolbar li {
+	float: left !important;
+	margin: 0 !important;
+	padding: 0;
+	padding-right: 0;
+	list-style: none !important;
+	outline: none;
+	position: relative;
+}
+.redactor_toolbar li.redactor_separator {
+	float: left;
+	height: 38px;
+	border-left: 1px solid #a1a5ae;
+	padding: 0;
+	margin: 0;	
+}
+
+
+.redactor_toolbar li {
+  a {
+    z-index: 1;
+  	width: 40px;
+  	height: 38px;
+  	display: block;
+  	line-height: 0;
+  	font-size: 0;
+  	cursor: pointer;
+  	zoom: 1;
+  	outline: none;
+  	text-decoration: none;
+  	background-image: image-url("no-repeat.png");
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    font-style: normal;
+   	position: relative;
+    background-clip: "content-box";
+    padding: 10px;
+  }
+	&:after{
+    z-index: 0;
+		content: "";
+		display: block;
+		position: absolute;
+		height: 28px;
+		width: 1px;
+		background-color:#a1a5ae;
+		left: 0;
+		top:5px; 
+	}
+}
+.redactor_toolbar li:first-child,
+.redactor_toolbar li.redactor_separator,
+.redactor_toolbar li.redactor_separator + li
+ {
+	&:after{
+		display: none;
+	}
+}
+
+.redactor_toolbar li {
+  &:first-child {
+    a:active, a.redactor_act {border-left: none;}
+  }
+  &:last-child {
+    a:active, a.redactor_act {border-right: none;}
+  }
+}
+
+
+.redactor_toolbar li a.redactor_btn_bold  {background-position: -31px -1092px;}
+.redactor_toolbar li a.redactor_btn_italic  {background-position: -31px -1112px;}
+.redactor_toolbar li a.redactor_btn_link  { background-position: -30px -831px; }
+.redactor_toolbar li a.redactor_btn_unorderedlist  {background-position: -44px -1132px;}
+.redactor_toolbar li a.redactor_btn_orderedlist  {background-position: -44px -1152px;}
+.redactor_toolbar li a.redactor_btn_heading  {background-position: -31px -1172px;}
+.redactor_toolbar li a.redactor_btn_quote  {background-position: -31px -1192px;}
+.redactor_toolbar li a.redactor_btn_code  {background-position: -44px -1212px;}
+.redactor_toolbar li a {
+  @extend .button_tip;
+  @extend .button_tip_top;
+}
+.redactor_toolbar li a:hover {
+	outline: none;
+}
+.redactor_toolbar li a:active, .redactor_toolbar li a.redactor_act {
+	outline: none;
+  border-right: 1px solid #a1a5ae;
+  border-left: 1px solid #a1a5ae;
+	margin-right:-1px;
+	width: 41px;
+  @include box-shadow(inset 0 2px 6px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.2) !important);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .redactor_toolbar li a {
+    background-image: image-url("no-repeat-2x.png");
+    background-size: 200px 3816px;
+  }
+}
+
+
+
+.post__actions {
+	position: absolute;
+	right: 0;
+	top: 140px;
+	width: 60px;
+	.button {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	  margin-bottom: 12px;
+	}
+}
+
+
+
+
+
+.post__section{
+  position: relative;
+  padding: 60px 84px;
+  overflow: visible !important;
+  @include transition(box-shadow .2s linear);
+  &:hover, &.is-selected {
+    .post__section-nav {
+      opacity: 1;
+    }
+  }
+  &.ui-sortable-helper {
+    background: #fff;
+    width: 816px !important;
+    height: auto !important;
+    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 4px 15px rgba(0,0,0,.15));
+  }
+  .media-composer {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 40px;
+    background: none;
+    @include box-shadow(none);
+    opacity: 0;
+    .is-active {
+      opacity: 1;
+    }
+    .media-composer__link {
+      margin-top: 0;
+    }
+    &:first-child, &:last-child {
+      top: -20px;
+      bottom: auto;
+      &:hover {
+        opacity: 1;
+        display: block;
+      }
+    }
+    &:last-child {
+      top: auto;
+      bottom: -20px;
+    }
+  }
+}
+
+.post__section_placeholder {
+  height: 144px;
+  background: #eee;
+  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2));
+}
+
+.post__section-nav {
+  display: block;
+  opacity: 0;
+  width: 20px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  @include transition(all .2s linear);
+  @extend .no-select;
+  .icon {
+    display: block;
+    margin-bottom: 6px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.post__section-heading{
+	margin-bottom:.4em;
+	@extend .kilo;
+}
+.post__section-body{
+	font-size:1.13333em;
+	& p, ol, ul {
+		margin-bottom:1em;
+		line-height:1.5em;
+		&:last-child{margin-bottom:0;}
+	}
+	& ul{list-style-type:disc;margin-left:4.9411em;}
+	& ol{list-style-type:decimal;margin-left:4.9411em;}
+	
+}
+
+.post__section_add-link {
+	.post__section-body_loading{
+		text-align: center;
+		margin: 100px 0;
+	}
+}
+
+.post__section-grab{
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  &:hover {
+    cursor: move;
+  }
+  &:nth-child(2) {
+    top: auto;
+    bottom: 0;
+  }
+  &:nth-child(3) {
+    height: auto;
+    width: 84px;
+    bottom: 0;
+    right: auto;
+  }
+  &:nth-child(4) {
+    height: auto;
+    width: 84px;
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
+}
+
+.post__section_image {
+  .post__section-grab {
+    height: auto;
+    bottom: 0;
+  }
+}
+
+.post__section_link {
+  &:before, &:after {
+    content: "";
+    display: block;
+    background: rgba(0,0,0,.20);
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 84px;
+    right: 84px;
+  }
+  &:after {
+    top: auto;
+    bottom: 0;
+  }
+  &:hover {
+    &:before, &:after {display: none;}
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.20);
+    background: #eee;
+  }
+  .post__section-grab {
+    &:nth-child(1) {
+      height: 24px;
+    }
+    &:nth-child(2) {
+      height: 24px;
+    }
+  }
+}
+.is-posted {
+  .post__section_link:hover {
+    &:before, &:after {display: block;}
+    box-shadow: none;
+    background: none transparent;
+  }
+}
+
+
+.post__section_link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.post__section_status {
+  padding: 0;
+}
+
+.post__section_launching {
+  background: #eee;
+  color: #999;
+  padding-top: 0;
+  padding-bottom: 24px;
+  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2));
+  .status-bar {
+    margin: 0 -84px 24px -84px;
+  }
+}
+
+
+.post__footer {}
+.post__footer__heading {
+	margin-top: .8em;
+	margin-bottom:.4em;
+	@extend .normal;
+	
+}
+
+.post__footer__actions {
+	margin-top: 1.6em;
+	padding-top: .8em;
+	border-top: 1px dashed #ddd;
+	text-align: center;
+}
+.post__section_dark {
+  background-color:#464d57;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.20);
+  &.ui-sortable-helper {
+    background-color:#464d57;
+  }
+}
+.post__section_input {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background: #e7ebf3;
+  @extend .cf;
+  .input_text_plain, .input_textarea_plain {
+    display: block;
+    width: 100%;
+    min-height: 1.2em;
+    font-size: 21px;
+    height: 0;
+  }
+}
+.post__section_input_link {
+  .input_text_plain, .input_textarea_plain {
+    word-break: break-all;
+  }
+}
+
+.post__section_loading {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 60px;
+  background: #eee image-url("indicator.gif") no-repeat center center;
+  background-size: 16px 16px;
+}
+
+[data-placeholder]:not([data-div-placeholder-content]):before {
+  content: attr(data-placeholder);
+  position: absolute;  
+  opacity: .5;
+}
+
+[data-placeholder]:focus:before {
+  opacity: .2;
+}
+
+.post__section_image {
+  text-align: center;
+  padding: 0;
+}
+
+.post__section_video {
+  text-align: center;
+  padding: 0;
+}
+
+.post__footer {
+  margin: 0 84px;
+  padding: 27px 0 24px;
+  border-top: 3px double #ccc;
+}
+
+// Posted state
+.post {
+  &.is-posted {
+    .post__header__image {
+      opacity: .6;
+    }
+  }
+}

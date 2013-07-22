@@ -1,0 +1,110 @@
+/*
+Publish Bar (.publish-bar) Used to display questions.
+
+Styleguide 14.0
+*/
+
+.publish-bar {
+  @extend .cf;
+  @extend .bg_5;
+  padding: .8em;
+  color: #fff;
+  border: 1px solid;
+  text-shadow: 0 1px 0 rgba(0,0,0,.8);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  line-height: 40px;
+  .button {
+    @extend .bg_inset;
+    @extend .bg_5__item;
+  }
+}
+
+.publish-bar__link {
+  color: #fff;
+  @include opacity(.7);
+  &:hover {color:#fff;opacity:1;}
+}
+
+.publish-bar__primary-action,.publish-bar__secondary-action, .publish-bar__options {
+  float: left;
+  margin: 0 .8em 0 0;
+}
+
+.publish-bar__tertiary-action {
+  float: right;
+}
+
+.publish-bar__link {
+  margin-left: .6em;
+}
+
+.publish-bar__options {
+  padding-left: 12px;
+  border-left: 1px solid #18191D;
+  box-shadow: inset 1px 0 rgba(255,255,255,.1);
+  line-height: 20px;
+  height: 40px;
+}
+
+.publish-bar__option {
+  position: relative;
+}
+
+/*
+Publish Bar View Mode (.publish-bar) Used to display questions.
+
+Styleguide 14.1
+*/
+
+/*
+Publish Bar Edit Mode (.publish-bar) Used to display questions.
+
+Styleguide 14.2
+*/
+
+/*
+Publish Bar Full Width (.publish-bar_full-width) Used to display questions.
+
+Styleguide 14.3
+*/
+
+.publish-bar_full-width {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+// Hacks to remove once we refactor the publish button component
+.button_publish, .button_edit-content {
+  float: left;
+  display: block;
+  margin-right: .8em;
+}
+
+.publish-bar__primary-action {
+  margin-right: 0;
+}
+
+.published_button { float: left;}
+
+.manage_published {
+  margin-right: .8em;
+  line-height: 1em;
+  text-align: center;
+  .publish-bar__link {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: -6px;
+    margin-left: 0;
+    font: 10px/10px "lucida grande", verdana, sans-serif;
+    &:after {
+      content:' \203A';
+    }
+  }
+}
+
+.publish-bar .delete {
+  @extend .publish-bar__link;
+}

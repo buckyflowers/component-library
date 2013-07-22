@@ -1,0 +1,107 @@
+.dialog-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  margin-top: -60px;
+  z-index: 2000001;
+  border: 1px solid #000;
+  background: #eceef1;
+  text-align: center;
+  color: #222;
+  text-shadow: 0 1px rgba(255,255,255,.8);
+  border-radius: 4px;
+  @include box-shadow(0 3px 8px rgba(0,0,0,.5));
+  @include transition();
+}
+
+.dialog-window__body {
+  padding: 24px;
+  font-size: 21px;
+  line-height: 1.5em;
+}
+
+.dialog-window__actions {
+  padding: .8em;
+  border-top: 1px solid #a1a5ae;
+  background-color: #CBCED6;
+  @include background-image(linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));  
+  border-radius: 0 0 3px 3px;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 1px rgba(255,255,255,.1));
+  @extend .cf;
+  .button {
+    @extend .bg_inset;
+    display: block;
+  }
+}
+
+.dialog-window__action {
+  display: block;
+  padding: 0 6px;
+  width: 50%;
+  float: left;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.dialog-window__wrapper {
+  display: block;
+  position: fixed;
+  top: -100%;
+  z-index: 2000000;
+  opacity: 0;
+  @include transition(opacity .2s linear);
+  &:before {
+    content: "";
+    display: block;
+    z-index: 2000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.7);
+    @include box-shadow(inset 0 0 80px rgba(0,0,0,.5));
+  }
+  &.is-active {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    opacity: 1;
+    .dialog-window {
+      -webkit-animation: bounceInDown .4s 1;
+      -moz-animation: bounceInDown .4s 1;
+      animation: bounceInDown .4s 1;
+    }
+  }
+  &.animate-out {
+    opacity: 0;
+    .dialog-window {
+      -webkit-animation: bounceOutDown .4s 1;
+      -moz-animation: bounceOutDown .4s 1;
+      animation: bounceOutDown .4s 1;
+    }
+  }
+}
+
+.dialog-window_color-dark {
+  border-color: #000;
+  background: #45464C;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,.9);
+  .dialog-window__actions {
+    background: #45464C;
+    border-color: #111;
+    @include background-image(linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%));  
+    .button {
+      @extend .border_dark;
+    }
+  }
+}

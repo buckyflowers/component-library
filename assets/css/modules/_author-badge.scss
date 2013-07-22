@@ -1,0 +1,132 @@
+.author-badge {
+  @extend .media;
+}
+
+.author-badge__avatar {
+  width: 144px;
+  margin-right: 1.6em;
+  @extend .media__block;
+}
+
+.author-badge__content {
+  @extend .media__content;
+}
+
+.author-badge__info {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 142px;
+  padding: .8em 1.6em 0 0;
+  @include box-sizing(border-box);
+}
+
+.author-badge__meta {
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 144px;
+  padding-left: .8em;
+  @include box-sizing(border-box);
+}
+
+.author-badge__name {
+  display: block;
+  font-weight: bold;
+  color: #222;
+  @extend .normal;
+}
+
+.author-badge__title {
+  font-size: .8666em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2px 0 4px 0;
+  @include opacity(.5);
+}
+
+.author-badge__actions {
+  position: absolute;
+  top: 12px;
+  right: 1.6em;
+  .button {
+    @extend .button_size_small;
+    float: left;
+    width: 60px;
+    padding: 0;
+    display: block;
+    margin-left: 12px;
+  }
+}
+
+.author-badge__action {
+  display: block;
+  max-width: 144px;
+}
+
+
+.author-badge__bio {
+  @include hyphens;
+  line-height: 1.5em;
+  height: 4.5em;
+  overflow: hidden;
+}
+
+.author-badge__stats {
+  float: right;
+  height: 26px;
+  line-height: 27px;
+  color: #999;
+  border-radius: 4px;
+  background: #eee;
+  text-align: center;
+  width: 50%;
+  .list { font-size: .86666em;}
+}
+
+.author-badge__stats_large {
+  top: 0;
+  height: auto;
+  .list {
+    .list__item {
+      float: left;
+      display: block;
+      width: 20%;
+      height: 142px;
+      padding: 50px 0;
+      border-left: 1px solid #ccc;
+      @include box-sizing(border-box);
+    }
+    .list__item_bullet {display: none;}
+  }
+  .author-badge__stats__number {
+    display: block;
+    font-size: 1.6em;
+    line-height: 1em;
+    color: #222;
+    font-weight: bold;
+  }
+  .author-badge__stats__label {
+    display: block;
+    font-size: 1.153em;
+  }
+}
+
+.author-badge__stats__link {
+  color: #222;
+}
+
+
+
+
+.author-badge_small {
+  .author-badge__bio {
+    margin-top: .4615em;
+    font-size: .86666em;
+    @include opacity(.5);
+  }
+  .author-badge__info {
+    width: 100%;
+    padding: 0;
+  }
+}

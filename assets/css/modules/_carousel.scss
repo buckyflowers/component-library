@@ -1,0 +1,54 @@
+.carousel {
+  background: #181819;
+  margin-bottom: 20px;
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+}
+
+.carousel_featured {
+  margin-top: -2px;
+}
+
+.carousel__slide {
+  overflow: hidden;
+}
+
+.slides {
+  -webkit-transform: translate3D(0, 0, 0);
+}
+
+.carousel__slide-body {
+  @extend .cf;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider { position: relative; width: 100%; padding: 0; background: #eee; max-height: 260px; overflow: hidden; background: #222; }
+
+@media screen and (max-width: 640px) {
+  .flexslider {max-height: 280px;}
+}
+
+/* Control Nav */
+.flex-control-nav {margin-top: 6px; text-align: center;}
+.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {
+  width: 14px;
+  height: 14px;
+  display: block;
+  cursor: pointer;
+  text-indent: -9999px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  background-color: transparent;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  @include opacity(.3);
+}
+.flex-control-nav li a:hover {opacity: .15;}
+.flex-control-nav li a.active {
+    background-color: #000;
+    border-radius: 16px;
+    border: 2px solid #000;
+}

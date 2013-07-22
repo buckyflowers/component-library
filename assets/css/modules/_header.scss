@@ -14,8 +14,8 @@ Styleguide 4.0
 
 .header {
   @extend .cf;
-  @extend .pbm;
   position: relative;
+  padding-bottom: .5em;
   vertical-align: bottom;
 }
 
@@ -24,9 +24,10 @@ Styleguide 4.0
 /* -- children -- */
 
 .header__heading {
+  float:left;
+  width: 76%;
   font-weight: bold;
-  line-height: 32px;
-  @extend .media__content;
+  line-height: 1em;
   @extend .ellipsis;
   a {
     @extend .ellipsis;
@@ -41,9 +42,8 @@ Styleguide 4.0
 
 .header__actions{
   text-align: right;
-  width: 230px;
-  @extend .media__block;
-  @extend .media__block_right;
+  float:right;
+  width: 22%;
   .button {display: block;}
 }
 

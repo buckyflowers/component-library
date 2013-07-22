@@ -1,5 +1,5 @@
 // include needed compass libraries
-@import "bourbon/bourbon";
+@import "lib/bourbon/bourbon";
 
 // base - reset, base element styles, custom mixins, variables, animations, typography, and grid
 @import "base/variables";
@@ -14,22 +14,40 @@
 
 
 // modules need to be included here to be made available sitewide 
-@import "modules/alert";
-@import "modules/box";
 @import "modules/button";
-@import "modules/dropdown";
-@import "modules/field";
-@import "modules/figure";
-@import "modules/footer";
-@import "modules/header";
-@import "modules/indicator";
-@import "modules/line";
-@import "modules/list";
 @import "modules/media";
-@import "modules/nav-bar";
-@import "modules/nav";
+@import "modules/list";
+@import "modules/alert";
+@import "modules/figure";
+@import "modules/line";
 @import "modules/page";
+@import "modules/nav-bar";
+@import "modules/header";
 @import "modules/post-tile";
+@import "modules/question-tile";
+@import "modules/tag";
+@import "modules/nav";
+@import "modules/field";
+@import "modules/carousel";
+@import "modules/progress-bar";
+@import "modules/viewer";
+@import "modules/publish-bar";
+@import "modules/finder";
+@import "modules/box";
+@import "modules/footer";
+@import "modules/tooltip";
+@import "modules/countdown";
+@import "modules/dialog-window";
+@import "modules/toggle-switch";
+@import "modules/modal";
+@import "modules/dropdown";
+@import "modules/comment-thread";
+@import "modules/indicator";
+@import "modules/author-badge";
+@import "modules/post";
+@import "modules/media-composer";
+@import "modules/status-bar";
+
 
 
 // utilities, helpers, states, and themes

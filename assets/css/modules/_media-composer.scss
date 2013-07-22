@@ -1,0 +1,201 @@
+.media-composer {
+  z-index: 100000;
+  background: #dee4fa;
+  bottom: -1px;
+  min-height: 40px;
+  display: block;
+  position: fixed;
+  width: 816px;
+  @include transition(all .2s linear);
+  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.2));
+  &.not-fixed {
+    position: absolute;
+  }
+  .field__tip {
+    display: none;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    top: -30px;
+    left: 1px;
+    right: 1px;
+    padding: 0 84px;
+    color: #999;
+    @include background-image(linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%));
+  }
+}
+
+.media-composer__link {
+  background: $linkblue;
+  border-radius: 10000px;
+  display: block;
+  height: 40px;
+  line-height: 38px;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 40px;
+  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.2), 0 1px 3px rgba(0,0,0,.15));
+  @include opacity(0);
+  @include transform(scale3d(.3,.3,0));
+  @include transition(all .2s linear);
+  @include fontstack-slab;
+  @extend .button_tip;
+  @extend .button_tip_top;
+  @extend .button_tip_medium;
+  @extend .no-select;
+  .icon {
+    display: block;
+    margin: 10px;
+    @include transition(all .2s linear);
+  }
+  .icon_upload_white {
+    margin: 10px 7px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: $linkbluehover;
+  }
+}
+
+.media-composer__link_add {
+  @include opacity(1);
+  z-index: 5;
+  @include transform(none);
+  .icon {
+    height: 32px;
+    width: 32px;
+    display: block;
+    margin: 4px;
+    font: bold 32px/1em Arial, sans-serif;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+  }
+  &:after {
+    width: 80px;
+    margin-left: -40px;
+  }
+}
+
+.media-composer__link_upload {
+  background-color: #444a54;
+  .icon {
+    @include transform(rotate3d(0,0,0,179deg));
+  }
+  &:hover {
+    background-color: #656e7d;
+  }
+  &:after {
+    width: 68px;
+    margin-left: -34px;
+  }
+}
+
+.media-composer__link_link {
+  background-color: #3dd060;
+  .icon {
+    @include transform(rotate3d(0,0,0,89deg));
+  }
+  &:hover {
+    background-color: #4ae16e;
+  }
+  &:after {
+    width: 70px;
+    margin-left: -35px;
+  }
+}
+
+.media-composer__link_screen {
+  background-color: #edb43b;
+  .icon {
+    @include transform(rotate3d(0,0,0,-180deg));
+  }
+  &:hover {
+    background-color: #f4c259;
+  }
+  &:after {
+    width: 130px;
+    margin-left: -65px;
+  }
+}
+
+.media-composer__link_webcam {
+  background-color: #c14141;
+  .icon {
+    @include transform(rotate3d(0,0,0,-90deg));
+  }
+  &:hover {
+    background-color: #dc5757;
+  }
+  &:after {
+    width: 144px;
+    margin-left: -72px;
+  }
+}
+
+.media-composer.is-active {
+  .media-composer__link {
+    @include opacity(1);
+    @include transform(none);
+    .icon {
+      @include transform(none);
+    }
+  }
+  .media-composer__link_add {
+    .icon {
+      font: bold 32px/1em Arial, sans-serif;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      @include transform(rotate3d(0,0,0,45deg));
+    }
+    &:after {
+      content: "Cancel" !important;
+      width: 58px;
+      margin-left: -29px;
+    }
+  }
+
+  .media-composer__link_upload {
+    margin-left: -124px;
+  }
+
+  .media-composer__link_link {
+    margin-left: -72px;
+  }
+
+  .media-composer__link_screen {
+    margin-left: 32px;
+  }
+
+  .media-composer__link_webcam {
+    margin-left: 84px;
+  }
+}
+
+.media-composer_input {
+  @extend .post__section;
+  @extend .post__section_input;
+  @extend .post__section_input_link;
+  margin: 0 !important;
+  height: 0;
+  padding: 17px 84px;
+  opacity: 0;
+  overflow: hidden !important;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.20);
+  @include transition(height .2s linear, opacity .2s linear, padding-top .2s linear, padding-bottom .2s linear);
+  &.is-active {
+    height: auto;
+    min-height: 60px;
+    opacity: 1;
+    display: block;
+    overflow: visible !important;
+  }
+  .input_textarea_plain {
+    padding: 0;
+    min-height: 1.25em;
+    line-height: 1.25em;
+  }
+}

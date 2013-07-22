@@ -1,0 +1,202 @@
+/*
+Finder (.finder) Good for finding things. Like lost keys.
+Styleguide 15.0
+*/
+
+.finder {
+  position: relative;
+  @extend .cf;
+  margin-bottom: 40px;
+  .header__heading, .header .button, .header__actions {width: auto;}
+}
+
+
+/* Children */
+.finder__all-posts { position: relative; z-index: 0;}
+
+.finder__categories, .finder__in-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  @include transform(translate3D(0, 0, 0));
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  transition: transform .2s linear;
+}
+
+.finder__in-category {
+  z-index: 6;
+}
+
+.finder__side-action {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-top: -2px;
+  margin-left: -55px;
+  padding: 5px;
+  border: 1px solid;
+  @extend .bg_5;
+  border-radius: 4px 0 0 0;
+  .button { @extend .bg_5; @extend .bg_5__item;}
+}
+
+.finder__side-bar {
+  position: relative;
+  float: left;
+  width: 40%;
+  overflow: hidden;
+  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+  .post-tile_box {padding: .6em;}
+  .icon_grabber {display: none;}
+  .post-tile_box {margin:.6em;}
+}
+
+.finder__main {
+  position: relative;
+  z-index: 20;
+  float: left;
+  width: 60%;
+  margin: 0 -1px;
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  .bd{
+    height: auto;
+  }
+}
+
+.finder__search {
+  margin: -1px 0;
+}
+
+.finder__side-bar__header {
+  @extend .bg_6;
+  .button {@extend .bg_6; @extend .bg_6__item;}
+}
+
+.finder__categories__header {
+  @extend .bg_5;
+  .button {@extend .bg_5; @extend .bg_5__item;}
+}
+
+.finder__search {
+  .field_bar {@extend .bg_5;}
+  .input_text {@extend .input_dark;}
+}
+
+.finder__main__header {
+  @extend .bg_2;
+}
+
+.finder__side-bar-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #999;
+  background: #ccc;
+  height: 521px;
+  .post-tile_box{border-color: #999; @include box-shadow(0 1px 3px rgba(0,0,0,.15)); background: #eee;}
+  .button_remove {display: none;}
+}
+
+.finder__categories .finder__side-bar-body {
+  height: 560px;
+  .list__item:first-child{margin-top: -1px;}
+}
+
+.finder__main-body, .finder__main-tip {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 560px;
+  border: 1px solid #aaa;
+  background: #eee;
+  .post-tile_box{@include box-shadow(inset 0 1px 0 rgba(255,255,255,.2),0 1px 3px rgba(0,0,0,.15));margin: -1px -1px 0 -1px;border-color: #aaa;}
+  .post-tile_box:first-child{margin-top: -2px;}
+  .post-tile_with-actions .button_add {display: none;}
+  .post-tile_with-actions .button_remove {display: none;}
+  .post-tile_with-actions:hover .button_remove {display: block;}
+}
+
+.finder__tip-text {
+  top: 50%;
+  margin: -20px 5% 0 5%;
+  width: 90%;
+  color: #777;
+  text-shadow: 0 1px 0 rgba(255,255,255,.9);
+  position: absolute;
+  text-align: center;
+}
+
+
+
+/*Modifiers for various children*/
+.finder__side-bar-body_dark {
+  border-color: #2c2d33;
+  background: #5c5d63;
+  .list__item, .post-tile_box {
+    background: #45464C;
+    border-color: #2c2d33;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.8);
+    @include box-shadow(inset 0 1px 0 rgba(255,255,255,.1),0 1px 3px rgba(0,0,0,.15));
+  }
+  .list__item:hover, .post-tile_box:hover {background: #757781;}
+  .button, .figure_frame .figure__body {border-color: #2c2d33;}
+}
+
+.finder__categories .list__item:after {
+  float: right;
+  content: "\203A";
+}
+
+.finder__categories .list__item:hover{
+  background: #757781;
+}
+
+.finder__categories-list {
+  margin: -1px -1px 0 -1px;
+}
+
+.finder .post-tile_box:hover, .post-tile_box {
+  cursor: move;
+}
+
+/*When you click a tile, make it blue! Yeah!*/
+.post-tile_box:active, .ui-sortable-helper .post-tile_box {
+  position: relative;
+  z-index: 10;
+  background-color: #5682d3;
+  border-color: #375da5;
+  border-bottom-color: #1a2f57;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 3px 8px rgba(0,0,0,.4));
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%));
+  .post-tile__actions {display: none;}
+  .figure_frame .figure__body {border-color: #375da5;border-bottom-color: #1a2f57;}
+  .post-tile__author-name { color: #fff; }
+}
+
+
+/*Animations for sidebar*/
+.finder__in-category.inactive, .finder__categories.inactive {
+  left: 100%; 
+}
+.finder__in-category.active, .finder__categories.active {
+  left: 0;
+}
+
+.ui-sortable-helper .post-tile__actions {display: none;}
+
+
+
+
+
+
+.ui-draggable-dragging{
+  width: 361px;
+
+}

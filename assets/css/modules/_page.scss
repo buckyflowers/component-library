@@ -102,7 +102,7 @@ Page Template.
   width:auto;
   *zoom:1;
   padding: 0 .8em;
-  @include box-sizing(border-box);
+  @include bf-box-sizing();
   &:after{
     clear:both;
     display:block;
@@ -122,8 +122,8 @@ Page Template.
 
 .page__sidebar{
   float:left;
-  @include box-sizing(border-box);
-  width: 230px !important;
+  @include bf-box-sizing();
+  @extend .g_d2;
   padding: 0 .8em;
   -webkit-transform: translate3d(0,0,0);
 }
