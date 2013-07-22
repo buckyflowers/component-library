@@ -1,8 +1,4 @@
-/*
-Page Template.
-
-*/
-
+// Page Template
 .page {
   &.is-at-bottom {
     .page__sidebar {
@@ -223,14 +219,7 @@ Page Template.
 
 
 
-
-/*
-Splash page for SSO and error pages
-
-.page_splash - when outcome of a user action is an error
-
-*/
-
+// Splash page for SSO and error pages
 .page_splash {
   color: #CCC;
   text-align: center;

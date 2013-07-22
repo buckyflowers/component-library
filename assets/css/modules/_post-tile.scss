@@ -1,10 +1,4 @@
-/*
-Post Tile [.post-tile]
-
-Styleguide 7.0
-*/
-
-
+// Post Tile
 .post-tile {
   @extend .cf;
   margin-bottom: 1.6em;
@@ -85,12 +79,7 @@ Styleguide 7.0
     @include opacity(.5);
   }
   
-/*
-Post Tile Example [.post-tile_example]
-
-Styleguide 7.0.1
-*/
-
+// Post Tile Example 
 .post-tile_example {
   .post-tile__title {
     color:#ccc;
@@ -171,12 +160,7 @@ Styleguide 7.0.2
 }
 
 
-/*
-Post Tile Media
-
-Styleguide 7.1
-*/
-
+// Post Tile Media
 .post-tile_list {
   height: auto;
   @extend .cf;
@@ -191,10 +175,7 @@ Styleguide 7.1
 }
 
 
-
-
-
-
+// Post Tile Box
 .post-tile_box {
   background: #fff;
   border: 1px solid #ccc;
@@ -252,12 +233,7 @@ Styleguide 7.1
 }
 
 
-/*
-Featured Tile
-
-Styleguide 7.2
-*/
-
+// Featured Tile
 .featured-tile-grid{
   overflow: hidden;
   
@@ -390,12 +366,7 @@ Styleguide 7.2
 
 
 
-/*
-Featured Tile Example
-
-Styleguide 7.2.1
-*/
-
+// Featured Tile Example
 .featured-tile_example {
   background: #f3f3f3;
   border: 1px dashed #cccccc;
@@ -435,12 +406,7 @@ Styleguide 7.2.1
 
 
 
-/*
-Featured Tile  CTA
-
-Styleguide 7.2.2
-*/
-
+// Featured Tile CTA
 .featured-tile_cta {
   @extend .featured-tile_example;
   background: #dbe7fb;
@@ -506,7 +472,7 @@ Styleguide 7.2.2
 
 
 
-
+// Universal Tile
 .universal-tile {
   background: #fff;
   border: 1px solid #ccc;
@@ -700,6 +666,7 @@ Styleguide 7.2.2
 }
 
 
+// Universal Tile List
 .universal-tile_list {
   border-radius: 4px;
   @extend .cf;

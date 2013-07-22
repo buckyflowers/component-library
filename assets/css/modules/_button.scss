@@ -1,13 +1,4 @@
-/*
-A button. Good for link tags or button elements.
-
-.button_primary - used to publish posts
-.button_secondary - used to publish posts
-.button_follow - for following users
-
-Styleguide 1.0
-*/
-
+// Button
 .button {
   height: 40px;
   padding: 0 16px;
@@ -82,21 +73,21 @@ Styleguide 1.0
   padding: 0;
 }
 
-.button_square-small {
+.button_square_small {
   display: block;
   height: 26px;
   width: 26px;
   line-height: 26px;
 }
 
-.button_square-medium {
+.button_square_medium {
   display: block;
   height: 32px;
   width: 32px;
   line-height: 32px;
 }
 
-.button_square-large {
+.button_square_large {
   display: block;
   height: 40px;
   width: 40px;
