@@ -7,7 +7,7 @@
   position: fixed;
   width: 816px;
   @include transition(all .2s linear);
-  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.2));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
   &.not-fixed {
     position: absolute;
   }
@@ -26,7 +26,7 @@
 }
 
 .media-composer__link {
-  background: $linkblue;
+  background: $link-color;
   border-radius: 10000px;
   display: block;
   height: 40px;
@@ -38,7 +38,7 @@
   text-align: center;
   top: 0;
   width: 40px;
-  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,.2), 0 1px 3px rgba(0,0,0,.15));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 1px 3px rgba(0,0,0,.15);
   @include opacity(0);
   @include transform(scale3d(.3,.3,0));
   @include transition(all .2s linear);
@@ -57,7 +57,7 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: $linkbluehover;
+    background-color: $link-color-hover;
   }
 }
 

@@ -23,7 +23,7 @@ Styleguide 5.0
   border-right: 0;
   border-left: 0;
   .button {
-    @include box-shadow( inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255, 0.2));
+    box-shadow:  inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255, 0.2);
     @extend .button_size_medium;
     @extend .border_dark;
     padding: 0 !important;
@@ -129,7 +129,7 @@ Styleguide 5.1
   border: 1px solid #CCCCCC;
   background-color:#e7e7e7;
   @include background-image(linear-gradient( rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%));
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,1));
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,1);
   @include bf-box-sizing();
   border-radius: 4px;
   padding:0 4px;

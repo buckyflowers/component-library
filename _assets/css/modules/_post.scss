@@ -9,7 +9,7 @@
     content: "";
     display: block;
   	background-color: #ffffff;
-    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15));
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15);
   }
   &.is-scrolled {
     &:before {
@@ -18,7 +18,7 @@
   }
   &.is-posted {
     background-color: #ffffff;
-    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15));
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.15);
     &:before {
       display: none;
     }
@@ -303,7 +303,7 @@ body .redactor_air {
   border-left: 1px solid #a1a5ae;
 	margin-right:-1px;
 	width: 41px;
-  @include box-shadow(inset 0 2px 6px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.2) !important);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.2) !important;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .redactor_toolbar li a {
@@ -345,7 +345,7 @@ body .redactor_air {
     background: #fff;
     width: 816px !important;
     height: auto !important;
-    @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2), 0 4px 15px rgba(0,0,0,.15));
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2), 0 4px 15px rgba(0,0,0,.15);
   }
   .media-composer {
     position: absolute;
@@ -353,7 +353,7 @@ body .redactor_air {
     left: 0;
     height: 40px;
     background: none;
-    @include box-shadow(none);
+    box-shadow: none;
     opacity: 0;
     .is-active {
       opacity: 1;
@@ -379,7 +379,7 @@ body .redactor_air {
 .post__section_placeholder {
   height: 144px;
   background: #eee;
-  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
 }
 
 .post__section-nav {
@@ -477,7 +477,7 @@ body .redactor_air {
   }
   &:hover {
     &:before, &:after {display: none;}
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.20);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
     background: #eee;
   }
   .post__section-grab {
@@ -512,7 +512,7 @@ body .redactor_air {
   color: #999;
   padding-top: 0;
   padding-bottom: 24px;
-  @include box-shadow(inset 0 0 0 1px rgba(0,0,0,0.2));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
   .status-bar {
     margin: 0 -84px 24px -84px;
   }
@@ -535,7 +535,7 @@ body .redactor_air {
 }
 .post__section_dark {
   background-color:#464d57;
-  box-shadow:inset 0 0 0 1px rgba(0,0,0,.20);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
   &.ui-sortable-helper {
     background-color:#464d57;
   }

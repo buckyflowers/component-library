@@ -13,7 +13,7 @@ Styleguide 17.0
 	border: 1px solid #ccc;
 	background: #fff;
   border-radius: 4px;
-	@include box-shadow(0 1px 3px rgba(0,0,0,.15));
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
 }
   .box__header{
     padding:.8em .8em 0;
@@ -41,7 +41,7 @@ Styleguide 17.0
 .box_example {
   background: #DBE7FB;
   border: 1px dashed #B2CCFD;
-  @include box-shadow(none);
+  box-shadow: none;
 }
 
   .box_example__action {
@@ -134,7 +134,7 @@ Styleguide 17.0
 .box_sidebar {
   border: none;
   background: transparent;
-  @include box-shadow(none);
+  box-shadow: none;
   margin-bottom:.8em;
   padding-bottom:.8em;
   border-bottom:1px solid #ccc;
@@ -191,7 +191,7 @@ Styleguide 17.0
   background: #fff;
   color: #555;
   border: none;
-  @include box-shadow(none);
+  box-shadow: none;
   border-radius: 4px;
   .box__header {
     margin: 0;
@@ -204,7 +204,7 @@ Styleguide 17.0
   .box__footer {
     margin: 0;
     border: none;
-    @include box-shadow(none);
+    box-shadow: none;
     background: #eee;
     border-radius: 0 0 4px 4px;
     .button {@extend .button_full;}
@@ -343,7 +343,7 @@ Styleguide 17.0
 
 .box_calculator-input {
   @extend .cf;
-  @include box-shadow(none);
+  box-shadow: none;
   border: none;
   border-top: 1px solid #ccc;
   margin: 0;
@@ -357,7 +357,7 @@ Styleguide 17.0
     width: 25%;
     margin: 0;
     border: none;
-    @include box-shadow(none);
+    box-shadow: none;
     @include box-sizing(border-box);
   }
 }
@@ -365,7 +365,7 @@ Styleguide 17.0
 
 .box_add {
   @extend .box_rounded;
-  @include box-shadow(none);
+  box-shadow: none;
   .box__header {
     padding: 1.6em 1.6em 0;
   }
@@ -384,7 +384,7 @@ Styleguide 17.0
     .indicator {display:block;}
   }
   .box__footer {
-    @include box-shadow(none);
+    box-shadow: none;
   }
   .box__footer-actions{
     float:left;
@@ -402,7 +402,7 @@ Styleguide 17.0
 .box_added {
   @extend .box_rounded;
   .box__footer {
-    @include box-shadow(none);
+    box-shadow: none;
     @include background-image(none);
     border:none;
     background-color:transparent;
@@ -432,7 +432,7 @@ Styleguide 17.0
   .author-badge__avatar {
     margin: -1px 1.6em -1px -1px;
     .figure__body:before {border-radius: 4px 0 0 4px;}
-    .figure__image {border-radius: 4px 0 0 4px;@include box-shadow(none);}
+    .figure__image {border-radius: 4px 0 0 4px;box-shadow: none;}
   }
 }
 
@@ -460,7 +460,7 @@ Styleguide 17.0
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
     opacity: .5;
-    @include box-shadow(none);
+    box-shadow: none;
   }
   @extend .no-select;
 }
@@ -504,7 +504,7 @@ Styleguide 17.0
 .box_contributor {
   border: none;
   background: transparent;
-  @include box-shadow(none);
+  box-shadow: none;
   margin: 0 !important;
   @extend .media;
   .button {
@@ -527,14 +527,14 @@ Styleguide 17.0
     float: left;
     width: 33.33333%;
     padding: 0 0 0 12px;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 }
 
 .box_contributor-link {
   border: none;
   background: transparent;
-  @include box-shadow(none);
+  box-shadow: none;
   height: 144px;
   line-height: 144px;
   text-align: center;
@@ -579,24 +579,3 @@ Styleguide 17.0
     @extend .bg_inset;
   }
 }
-
-// HACKS
-.dialogs {display: none;}
-#dialog-marketing_message_content {
-  width: 612px;
-  .inner{
-  .action_buttons{
-    .done{float: right;}
-    }
-  }
-}
-
-.resource_viewer .box_add {
-  margin: -51px -15px -46px -15px;
-}
-
-.ui-autocomplete {
-    width: 100px;
-    max-height: 100px;
-    overflow: scroll;
-  }
