@@ -616,10 +616,10 @@ Styleguide 3.0
       padding: 2px 12px;
       text-decoration: none;
       &:hover{
-        @extend .dropdown__menu-link:hover;
+        @extend .dropdown__menu__link:hover;
       } 
       &:active{
-        @extend .dropdown__menu-link:active;
+        @extend .dropdown__menu__link:active;
       }
     }
   }
