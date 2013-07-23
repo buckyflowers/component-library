@@ -17,7 +17,7 @@
     height: 60px;
     width: 0;
     border: 1px solid;
-    @extend .bg_3;
+    @extend .theme_3;
   }
   .status-bar__label {
     display: block;
@@ -41,7 +41,7 @@
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
   .status-bar__meter {
     background-image: image-url("Processing-Bar.gif") !important;
-    @extend .bg_4;
+    @extend .theme_4;
     width: auto;
   }
   &:hover {
@@ -51,7 +51,7 @@
 
 .status-bar_error {
   .status-bar__meter {
-    @extend .bg_10;
+    @extend .theme_5;
     width: auto;
   }
 }
@@ -59,7 +59,7 @@
 .status-bar_indicating {
   .status-bar__meter {
     background-image: image-url("Indicating-Bar.gif") !important;
-    @extend .bg_5;
+    @extend .theme_2;
     width: 100%;
   }
 }

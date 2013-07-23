@@ -32,7 +32,7 @@ Styleguide 18.0
 		position:absolute;
 	}
 	.tooltip__heading {font-weight:bold;}
-	.button {@extend .border_dark; @extend .bg_inset;}
+	.button {@extend .border_dark; @extend .theme_inset;}
 	&:hover {
 	  -webkit-animation: none;
 	}

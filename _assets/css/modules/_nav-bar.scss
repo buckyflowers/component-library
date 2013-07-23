@@ -9,10 +9,11 @@ Styleguide 5.0
   height: 44px;
   position: relative;
   z-index: 1000;
-  border-bottom: 1px solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   color: #ffffff;
   line-height: 44px; 
-  @extend .bg_5;
+  @extend .theme_2;
 }
 
 .nav-bar__nav{float:left;}
@@ -118,7 +119,7 @@ Styleguide 5.1
 .nav-bar_tool {
   height: auto;
   border-radius: 4px 4px 0 0;
-  @extend .bg_7;
+  @extend .theme_1;
   @extend .cf;
   .icon {margin-top: -3px;}
 }
@@ -145,7 +146,7 @@ Styleguide 5.1
 
 // nav_site-header
 .nav-bar_site-search {
-  @extend .bg_7;
+  @extend .theme_1;
   border-radius: 4px;
   position: absolute;
   top: 50%;

@@ -41,9 +41,9 @@ Styleguide 15.0
   margin-left: -55px;
   padding: 5px;
   border: 1px solid;
-  @extend .bg_5;
+  @extend .theme_2;
   border-radius: 4px 0 0 0;
-  .button { @extend .bg_5; @extend .bg_5__item;}
+  .button { @extend .theme_2; @extend .theme_2__item;}
 }
 
 .finder__side-bar {
@@ -74,22 +74,22 @@ Styleguide 15.0
 }
 
 .finder__side-bar__header {
-  @extend .bg_6;
-  .button {@extend .bg_6; @extend .bg_6__item;}
+  @extend .theme_6;
+  .button {@extend .theme_6; @extend .theme_6__item;}
 }
 
 .finder__categories__header {
-  @extend .bg_5;
-  .button {@extend .bg_5; @extend .bg_5__item;}
+  @extend .theme_2;
+  .button {@extend .theme_2; @extend .theme_2__item;}
 }
 
 .finder__search {
-  .field_bar {@extend .bg_5;}
+  .field_bar {@extend .theme_2;}
   .input_text {@extend .input_dark;}
 }
 
 .finder__main__header {
-  @extend .bg_2;
+  @extend .theme_2;
 }
 
 .finder__side-bar-body {

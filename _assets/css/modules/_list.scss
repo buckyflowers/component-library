@@ -223,7 +223,7 @@ Styleguide 3.0
   @extend .list_box;
   .list__header {
     position: relative;
-    @extend .bg_5; 
+    @extend .theme_2; 
     margin-top:-1px;
     margin-left:-1px;
     margin-right:-1px;
@@ -339,13 +339,13 @@ Styleguide 3.0
   }
   .list__item:first-child { counter-reset: customlistcounter; }
   .list__item:hover {
-    @extend .bg_3;
+    @extend .theme_3;
     @include transition(none);
     z-index: 1;
     a {color: #fff;}
   }
   .list__item:active {
-    @extend .bg_active;
+    // @extend .theme_active;
   }
 }
 
@@ -418,8 +418,8 @@ Styleguide 3.0
   @extend .list_box;
   @extend .list_line;
   @extend .list_rounded;
-  @extend .bg_11;
-  .list__item {min-height: 98px; @extend .bg_11__item;}
+  @extend .theme_8;
+  .list__item {min-height: 98px; @extend .theme_8__item;}
   .list__item_none {
     text-align: center;
     line-height: 98px;
@@ -430,9 +430,9 @@ Styleguide 3.0
   @extend .list_box;
   @extend .list_line;
   @extend .list_rounded;
-  @extend .bg_7;
-  @extend .bg_inset;
-  .list__item {min-height: 98px; @extend .bg_7__item}
+  @extend .theme_1;
+  @extend .theme_inset;
+  .list__item {min-height: 98px; @extend .theme_1__item}
   .list__item_none {
     text-align: center;
     line-height: 98px;
@@ -519,7 +519,7 @@ Styleguide 3.0
   color: #777;
   height: 98px;
   @include box-sizing(border-box);
-  @extend .bg_inset;
+  @extend .theme_inset;
 }
 
 .list__item_result__thumbnail {
@@ -561,7 +561,7 @@ Styleguide 3.0
   border-radius: 4px;
   border: 1px solid;
   background-size: 0 40px;
-  @extend .bg_1;
+  @extend .theme_1;
   @extend .no-select;
   &.active {
     .list__header:after {
@@ -626,7 +626,7 @@ Styleguide 3.0
 }
 
 .list_accordion_dark {
-  @extend .bg_5;
+  @extend .theme_2;
   .list__body {
     border: 1px solid #090a0b;
     background: #2e333b;

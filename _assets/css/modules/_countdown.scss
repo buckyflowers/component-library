@@ -7,8 +7,8 @@
   border: 1px solid #2c56a2;
   border-left: none;
   border-right: none;
-  @extend .bg_3;
-  .button {@extend .bg_3__item;}
+  @extend .theme_3;
+  .button {@extend .theme_3__item;}
 }
 
 .countdown-header {
@@ -19,7 +19,7 @@
   margin: -1px;
   border: 1px solid #2c56a2;
   border-radius: 4px 4px 0 0;
-  @extend .bg_3;
+  @extend .theme_3;
 }
 
 .countdown__main {
@@ -80,8 +80,8 @@
   border-left: none;
   line-height: 60px;
   border-radius: 0 4px 4px 0;
-  @extend .bg_inset;
-  @extend .bg_4;
+  @extend .theme_inset;
+  @extend .theme_4;
 }
 
 .countdown__button.countdown__button_vote {

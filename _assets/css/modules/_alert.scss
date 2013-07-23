@@ -21,7 +21,7 @@ Styleguide 11.0
     display: block;
   }
   // default skin
-  @extend .bg_flat;
+  @extend .theme_flat;
   border: 1px solid #222;
   border-bottom-color: #000;
   background: #333;
@@ -42,29 +42,29 @@ Styleguide 11.0
 
 
 .alert_success, .alert_positive {
-  @extend .bg_4;
-  .button { @extend .bg_4__item;}
+  @extend .theme_4;
+  .button { @extend .theme_4__item;}
 }
 .alert_error, .alert_negative {
-  @extend .bg_10;
-  .button { @extend .bg_11__item;}
+  @extend .theme_5;
+  .button { @extend .theme_8__item;}
 }
 .alert_notice {
-  @extend .bg_3;
-  .button { @extend .bg_3__item;}
+  @extend .theme_3;
+  .button { @extend .theme_3__item;}
 }
 .alert_info{
-  @extend .bg_8;
+  @extend .theme_6;
 }
 .alert_tip{
-  @extend .bg_11;
+  @extend .theme_8;
 }
 
 
 
 
 .alert_tip_series {
-  @extend .bg_11;
+  @extend .theme_8;
   .alert_tip__description {
     margin-top: 9px;
   }

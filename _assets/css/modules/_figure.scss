@@ -327,7 +327,7 @@ Styleguide 2.0
   border: 1px solid;
   padding: 3px;
   border-radius: 2px;
-  @extend .bg_4;
+  @extend .theme_4;
   &:before {
     content:"";
     display: block;
@@ -350,7 +350,7 @@ Styleguide 2.0
 .figure_user-thumb {
   border: 1px solid;
   border-radius: 2px;
-  @extend .bg_5;
+  @extend .theme_2;
   box-shadow:  0 1px 3px rgba(0,0,0,.15);
 }
 
