@@ -26,7 +26,7 @@
 }
 
 .media-composer__link {
-  background: $linkblue;
+  background: $link-color;
   border-radius: 10000px;
   display: block;
   height: 40px;
@@ -57,7 +57,7 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: $linkbluehover;
+    background-color: $link-color-hover;
   }
 }
 
