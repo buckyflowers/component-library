@@ -41,27 +41,24 @@
     text-transform: uppercase;
     top: 0;
   }
+  
   .dropdown__toggle {
     position: relative;
     &:after, &:before {
       border: solid transparent;
+      border-bottom-color: #2d3237;
+      border-width: 5px;
       content: "";
       display: none;
       height: 0;
       left: 15px;
+      margin-left: -5px;
+      margin-top: -10px;
       pointer-events: none;
       position: absolute;
       top: 100%;
       width: 0;
       z-index: 2;
-    }
-
-    &:after, &:before {
-      border-color: transparent;
-      border-bottom-color: #2d3237;
-      border-width: 5px;
-      margin-left: -5px;
-      margin-top: -10px;
     }
     &:before {
       border-bottom-color: #090a0b;

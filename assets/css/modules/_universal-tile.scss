@@ -215,7 +215,7 @@
     color: #222;
     @include bf-box-sizing();
     a {color: #222;}
-    a:hover {color: $linkbluehover;}
+    a:hover {color: $link-color-hover;}
     .universal-tile__title {
       position: relative;
       display: block;
@@ -225,7 +225,7 @@
       font-size: 1em !important;
       font-weight: normal !important;
       padding: 0;
-      color: $linkblue;
+      color: $link-color;
       &:before {
         content: "";
         display: block;

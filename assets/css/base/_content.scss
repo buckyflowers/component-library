@@ -136,7 +136,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     border-color: #999;
   }
   &:active {
-    border-color: $linkblue;
+    border-color: $link-color;
     box-shadow: 0 0 5px rgba(85, 129, 211, 0.5);
   }
   &:checked {
@@ -179,12 +179,12 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 
 a {
   text-decoration: none;
-  color: $linkblue;
+  color: $link-color;
   cursor: pointer;
   @include transition(color .25s ease-out, border-color .25s ease-out, opacity .25s linear, background .25s ease-out);
   -webkit-backface-visibility: hidden;
   &:hover {
-      color: $linkbluehover;
+      color: $link-color-hover;
       @include transition(none);
       outline:none
   }
@@ -207,7 +207,7 @@ a {
 .link_follow {
   display: block !important;
   line-height: 1em;
-  color: $linkblue;
+  color: $link-color;
   @extend .text_small;
 }
 
@@ -252,7 +252,7 @@ hr{
 .hilight {
   text-align: center;
   display: inline-block;
-  height: 40px;
+  height: 44px;
   line-height: 42px;
   padding: 0 6px;
   color: #777;
