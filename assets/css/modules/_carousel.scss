@@ -1,7 +1,7 @@
 .carousel {
   background: #181819;
   margin-bottom: 20px;
-  @include box-shadow(0 1px 3px rgba(0,0,0,.15));
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
 }
 
 .carousel_featured {

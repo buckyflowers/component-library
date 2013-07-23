@@ -4,7 +4,7 @@
   height: 20px;
   padding: 1px;
   @include background-image(linear-gradient( rgba(13,19,46,1) 100%, rgba(33,91,46,1) 100%));
-  @include box-shadow(inset 0 1px 3px rgba(0,0,0, 0.2), 0 1px 0 rgba(255,255,255, 0.9));
+  box-shadow: inset 0 1px 3px rgba(0,0,0, 0.2), 0 1px 0 rgba(255,255,255, 0.9);
   border-radius: 4px;
   @include transition(all .2s linear);
 }

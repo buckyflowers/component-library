@@ -123,7 +123,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   width: 16px;
   -webkit-appearance: none;
   @include background-image(linear-gradient( rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%));
-  @include box-shadow (inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3));
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3);
   @include box-sizing(border-box);
   &:before {
     @extend .icon;
@@ -137,7 +137,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
   }
   &:active {
     border-color: $linkblue;
-    @include box-shadow(0 0 5px rgba(85, 129, 211, 0.5));
+    box-shadow: 0 0 5px rgba(85, 129, 211, 0.5);
   }
   &:checked {
     border-color: #84be2a;
@@ -163,7 +163,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
     &:before {
       background: #000;
       background: rgba(0,0,0,.3);
-      @include box-shadow (inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3));
+      box-shadow:inset 0 1px 1px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.3);
     }
   }
 }
@@ -369,7 +369,7 @@ hr{
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   @include opacity(.2);
-  @include box-shadow(inset 0 1px rgba(255,255,255,.2), 0 1px rgba(255,255,255,.2));
+  box-shadow: inset 0 1px rgba(255,255,255,.2), 0 1px rgba(255,255,255,.2);
 }
 
 .double-line_left {
@@ -380,7 +380,7 @@ hr{
 
 .double-line_light {
   border-color: #fff;
-  @include box-shadow(inset 0 1px rgba(0,0,0,.2), 0 1px rgba(0,0,0,.2));
+  box-shadow: inset 0 1px rgba(0,0,0,.2), 0 1px rgba(0,0,0,.2);
 }
 
 .sup {
