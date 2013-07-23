@@ -71,9 +71,6 @@ hr {
   padding: 0;
 }
 
-
-.ui-widget { font: 1em "din", helvetica, arial, sans-serif;}
-
 // make everthing border-box.
 *{
   @include box-sizing(border-box);

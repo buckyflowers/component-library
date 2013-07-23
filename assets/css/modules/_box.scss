@@ -579,24 +579,3 @@ Styleguide 17.0
     @extend .bg_inset;
   }
 }
-
-// HACKS
-.dialogs {display: none;}
-#dialog-marketing_message_content {
-  width: 612px;
-  .inner{
-  .action_buttons{
-    .done{float: right;}
-    }
-  }
-}
-
-.resource_viewer .box_add {
-  margin: -51px -15px -46px -15px;
-}
-
-.ui-autocomplete {
-    width: 100px;
-    max-height: 100px;
-    overflow: scroll;
-  }

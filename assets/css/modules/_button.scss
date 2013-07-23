@@ -541,59 +541,6 @@
   margin: 45px 0;
 }
 
-
-
-// Hacks until we can replace publish bar component
-.button.publish {
-  @extend .bg_4;
-}
-.button.publish.unpublish {
-  @extend .bg_1;
-  @extend .bg_inset;
-}
-
-
-
-// Hacks until we can change up the follow button on badge
-.button.status_follow {
-  @extend .bg_12;
-}
-
-.button.status_following{
-  @extend .bg_7;
-}
-
-// Hacks for choose as best button
-.accepted {
-  .choose {display: none;}
-  .chosen {display: block;} 
-  .accepted_star {
-    display: block;
-  }
-}
-
-// Hacks until we can replace publish bar component
-.button.publish {
-  @extend .bg_4;
-}
-.button.publish.unpublish {
-  @extend .bg_1;
-  @extend .bg_inset;
-}
-.chosen {display: none;}
-.accepted_star {
-  @extend .bg_5;
-  overflow: hidden;
-  width: 24px;
-  padding-right: 0;
-  display: none;
-  @include transition(width .2s linear);
-  &:hover {
-    width: 120px;
-    cursor: default;
-  }
-}
-
 .button_focus {
   position: fixed;
   bottom: 24px;
@@ -628,22 +575,6 @@
   }
 }
 
-
-
-// Hacks until we can change up the follow button on badge
-
-.button.status_follow {
-  @extend .bg_3;
-}
-
-.button.status_following{
-  @extend .bg_4;
-}
-
-// Hacks until we can change the casing on the search sort bar
-.sort_bar {
-  text-transform: capitalize;
-}
 
 .button_with-options {
   display: block;

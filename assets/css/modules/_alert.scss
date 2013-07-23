@@ -200,18 +200,3 @@ Styleguide 11.3
   left: 0;
   width: 100%;
 }
-
-// Hacks
-#flash #notice, #flash #error {
-  @extend .alert;
-  @extend .mbl;
-  line-height: 1em;
-}
-.alert.success, .alert.notice, #flash #notice {
-  @extend .bg_4;
-  @extend .bg_flat;
-}
-.alert.error, #flash #error {
-  @extend .bg_10;
-  @extend .bg_flat;
-}
