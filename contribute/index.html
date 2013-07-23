@@ -1,0 +1,270 @@
+<!-- @include head -->
+<!-- @include header -->
+
+<div class="page__body page__body_fixed_margin page__body_post">
+  <div class="page__wrapper">
+    
+    <!-- @include post_create_sidebar -->
+
+    <section class="page__main">
+
+      <article class="post is_editing">
+        <header class="post__header">
+          <textarea placeholder="Add a title" class="post__title post__header__textarea js-autogrow"></textarea>
+          <textarea placeholder="Add a summary (optional)" class="post__description post__header__textarea js-autogrow"></textarea>
+          <figure class="post__header__image" style="background-image:url(http://dotsandloops.me/P93q/arch.png)" class="post__header__image"></figure>
+          <nav class="nav_post-header nav">
+            <ul>
+              <li class="nav__item"><i class="icon icon_close_white hidden js-remove-header"></i></li>
+              <li class="nav__item dropdown">
+                <i class="icon icon_paintbrush_white js-dropdown"></i>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__menu__item">
+                    <a href="#" class="dropdown__menu__link custom-color-4 js-header-color"></a>
+                  </li>
+                  <li class="dropdown__menu__item">
+                    <a href="#" class="dropdown__menu__link custom-color-3 js-header-color"></a>
+                  </li>
+                  <li class="dropdown__menu__item">
+                    <a href="#" class="dropdown__menu__link custom-color-2 js-header-color"></a>
+                  </li>
+                  <li class="dropdown__menu__item">
+                    <a href="#" class="dropdown__menu__link is-active custom-color-1 js-header-color"></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item js-header-image of_hidden">
+                <i class="icon icon_cam_white"></i>
+                <input type='file' class='js-input-image input_file'>
+              </li>
+            </ul>
+          </nav>
+        </header>   
+
+        <div id="contribute" class="post__body">
+
+          <section class="post__section is-formatted">
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <nav class="post__section-nav">
+              <i class="icon icon_grabber_transparent js-grab-handle"></i>
+              <i class="icon icon_trash_transparent js-delete-section"></i>
+            </nav>
+            <section class="js-redactor" id="redactor_content" data-placeholder='Start writing here, or use the + button to add media...'></section>
+          </section>
+
+          <section class="post__section post__section_launching hidden">
+            <div class="status-bar status-bar_indicating">
+              <div class="status-bar__meter"></div>
+              <span class="status-bar__label"><strong class="b">Launching Recorder</strong> &middot; This may take a moment...</span>
+            </div>
+            <section class="list list_bullet">
+              <ul class="list__body">
+                <li class="list__item">If you see a pop-up or message, you’ll need to agree to “trust” the applet. Check the "Always Allow" box to never be by bothered again.</li>
+                <li class="list__item">If needed, activate the plugin and allow it to start.</li>
+                <li class="list__item">The recorder may require the latest version of Java. You can get it <a href="#">here</a>.</li></ul>
+            </section>
+          </section>
+
+          <section class="post__section post__section_video hidden">
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <nav class="post__section-nav">
+              <i class="icon icon_grabber_transparent js-grab-handle"></i>
+              <i class="icon icon_trash_transparent js-delete-section"></i>
+            </nav>
+            <figure class="figure figure_post">
+              <img class="figure__image" src="http://dotsandloops.me/OsZu/Untitled-1.jpg">
+            </figure>
+          </section>
+
+          <section id="link-photo-finished" class="post__section post__section_full-width hidden">
+            
+              <div class="media media_weblink media_weblink_image">
+                <div class="media__block">
+                  <div class="figure figure_simple">
+                    <div class="figure__body" href="#">
+                       <img class="figure__image" src="http://dotsandloops.me/OpfA/DSC00989.jpg">
+                      <div class="figure__details figure__details_full-overlay">
+
+                        <div class="media__description">
+                          <img src="http://24.media.tumblr.com/avatar_80d21a54db34_16.png" alt="" class="media__description-favicon"><span>Source: <strong class="b">http://www.nyc.net</strong></span>
+                        </div>
+                        <div class="media__details">
+                          <a class="b link_inverted" href="#"><i class="icon icon_link_white icon_inline"></i> Direct Link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+          </section>
+
+          <section class="post__section post__section_status hidden">
+            <div class="status-bar status-bar_uploading hidden">
+              <div class="status-bar__meter"></div>
+              <span class="status-bar__label"><strong class="b">Uploading</strong> &middot; <span class="js-upload-percent">80</span></span>
+            </div>
+
+            <div class="status-bar status-bar_processing hidden">
+              <div class="status-bar__meter"></div>
+              <span class="status-bar__label"><strong class="b">Processing</strong> &middot; Feel free to continue writing, or post at any time.</span>
+            </div>
+
+            <a class="status-bar status-bar_error hidden">
+              <span class="status-bar__meter"></span>
+              <span href="#" class="status-bar__label"><strong class="b">There was a problem uploading your file.</strong> &middot; Upload Again›</span>
+            </a>
+          </section>
+
+          <section class="post__section post__section_image hidden">
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <nav class="post__section-nav">
+              <i class="icon icon_grabber_transparent js-grab-handle"></i>
+              <i class="icon icon_trash_transparent js-delete-section"></i>
+            </nav>
+            <figure class="figure figure_post">
+              <img class="figure__image" src="http://dotsandloops.me/P8sV/Unknown-3.png">
+            </figure>
+          </section>
+
+          <section class="hidden post__section is-formatted">
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <nav class="post__section-nav">
+              <i class="icon icon_grabber_transparent js-grab-handle"></i>
+              <i class="icon icon_trash_transparent js-delete-section"></i>
+            </nav>
+            <section id="redactor_content_2" class="js-redactor" data-placeholder='Continue writing...'></section>
+          </section>
+
+
+
+
+          <section id="link-finish" class="post__section post__section_link hidden">
+              <i class="js-grab-handle post__section-grab"></i>
+              <i class="js-grab-handle post__section-grab"></i>
+              <i class="js-grab-handle post__section-grab"></i>
+              <i class="js-grab-handle post__section-grab"></i>
+              <nav class="post__section-nav">
+                <i class="icon icon_grabber_transparent js-grab-handle"></i>
+                <i class="icon icon_trash_transparent js-delete-section"></i>
+              </nav>
+              <div class="media media_weblink">
+                <div class="media__block figure figure_simple with-overlay">
+                  <div class="figure__body" href="#">
+                    <em class="figure__details figure__details_full-overlay media__block-details">
+                      <a href="#" class="icon icon_close_white fl"></a>
+                      <a href="#" class="icon icon_right_white fr"></a>
+                      <a href="#" class="icon icon_left_white fr"></a>
+                    </em>
+                    <img class="figure__image" src="http://dotsandloops.me/P9H7/Untitled-2.png">
+                  </div>
+                </div>
+                <div class="media__metadata">
+                  <h3 class="media__title">
+                    <a href="#">Arches National Park FAQ &nbsp;<i class="icon icon_link_transparent"></i></a>
+                  </h3>
+                  <div class="media__description">
+                    <img src="http://www.huffingtonpost.com/favicon.ico" alt="" class="media__description-favicon"><span class="b">http://www.nps.gov - </span><span> Below are answers to many common-and some not so common-questions asked by our visitors. If you feel we've left one out, please let us know!</span>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <section id="misc-file" class="post__section post__section_link hidden post__section_dark">
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+            <i class="js-grab-handle post__section-grab"></i>
+              <nav class="post__section-nav">
+                <i class="icon icon_grabber_transparent js-grab-handle"></i>
+                <i class="icon icon_trash_transparent js-delete-section"></i>
+              </nav>
+              <div class="media media_weblink">
+                <div class="media__block figure figure_simple-dark">
+                  <div class="figure__body" href="#">
+                    <img class="figure__image" src="/assets/default_course_download_thumb.png">
+                  </div>
+                </div>
+                <div class="media__metadata">
+                  <h3 class="media__title">
+                    <a href="#" class="link_inverted">File.psd</a>
+                  </h3>
+                  <div class="media__description">
+                    156kb
+                  </div>
+                  <div class="media__details">
+                    <a class="button button_download button_icon prm" href="#">
+                      <span class="button_icon__wrapper mrm"><i class="icon icon_download_transparent"></i></span>
+                      <span class="button__label">Download</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </section>
+        </div>
+
+        <footer class="media-composer">
+          <section id="link-start" class="media-composer_input js-link-input">
+            <nav class="post__section-nav">
+              <i class="icon icon_trash_transparent js-cancel-section mtm"></i>
+            </nav>
+            <div class="field__tip">Press Enter/Return to add.</div>
+            <textarea placeholder="Enter a URL, or embed code" class="input input_textarea_plain js-autogrow js-link-entry"></textarea>
+          </section>
+          <a name="Add File" class="media-composer__link media-composer__link_upload js-upload file js-toggle">
+            <i class="icon icon_upload_white"></i>
+            <input type='file' class='js-input-file input_file'>
+          </a>
+          <a name="Add Link" class="media-composer__link media-composer__link_link js-link-input-toggle js-toggle">
+            <i class="icon icon_link_white"></i>
+          </a>
+          <a name="Add Media" class="media-composer__link media-composer__link_add js-toggle">
+            <i class="icon icon_plus_text">+</i>
+          </a>
+          <a  name="Record Your Screen" class="media-composer__link media-composer__link_screen js-toggle" onclick="alert('screencast');">
+            <i class="icon icon_cursor_white"></i>
+          </a>
+          <a  name="Record From Webcam" class="media-composer__link media-composer__link_webcam js-toggle" onclick="alert('webcam');">
+            <i class="icon icon_camera_white"></i>
+          </a>
+        </footer>
+        <a id="bottom"></a>
+      </article>
+    </section>  
+
+  </div>
+</div>
+</div>
+
+<div class="dialog-window__wrapper">
+  <div class="dialog-window dialog-window_color-dark">
+    <section class="dialog-window__body">
+      Are you sure you want to delete this section of your post?
+    </section>
+    <footer class="dialog-window__actions">
+      <span class="dialog-window__action"><a class="button js-delete-section-cancel">Cancel</a></span>
+      <span class="dialog-window__action"><a class="button js-delete-section-confirm button_remove">Delete</a></span>
+    </footer>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#contribute").contribute();
+  })
+</script>
+<!-- @include foot -->
+

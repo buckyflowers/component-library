@@ -1,0 +1,124 @@
+    <aside class="page__sidebar">
+      <section class="box box_post-controls mbm">
+        <section class="box__body">
+
+          <span class="button_with-options">
+            <span class="dropdown">
+              <a href="#" class="button button_primary button_options button_square-large js-dropdown js-button_options"></a>
+              <ul class="dropdown__menu" style="width:130px;">
+                <li class="dropdown__menu-item">
+                  <a class="dropdown__menu-link state_active" href="#">
+                    <input type="radio" name="post-time" class="input_radio" id="now" checked> <label for="now">Post Now</label>
+                  </a>
+                </li>
+                <li class="dropdown__menu-item">
+                  <a class="dropdown__menu-link" href="#">
+                    <input type="radio" name="post-time" class="input_radio" id="later"> <label for="later">Post Later</label>
+                  </a>
+                </li>
+                <li class="dropdown__menu-item">
+                  <a class="dropdown__menu-link" href="#">
+                    <input type="radio" name="post-time" class="input_radio" id="quietly"> <label for="quietly">Post Quietly</label>
+                  </a>
+                </li>
+              </ul>
+            </span>
+
+            <a href="http://croz.bloomfire.me:3000/styleguide/contribute2" class="button button_primary button_main">
+              Post Now
+            </a>
+
+          </a>
+        </section>
+        <section class="box__footer js-autosave">
+          Saved
+        </section>
+      </section>
+
+      <section class="list list_accordion list_accordion-post-controls mbm">
+        <header class="list__header js-accordion">
+          Options
+        </header>
+        <section class="list__body">
+          <li class="list__item">
+            <a href="#" class="list__link">
+              View Revisions
+            </a>
+          </li>
+          <li class="list__divider"></li>
+          <li class="list__item">
+            <span class="list__link">
+              <input type="checkbox" class="input_checkbox" id="feature"> <label for="feature">Feature Post</label>
+            </span>
+          </li>
+          <li class="list__divider"></li>
+          <li class="list__item">
+            <span class="list__link">
+              <input type="checkbox" class="input_checkbox" id="public"> <label for="public">Make Public</label>
+            </span>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__link">
+              Add Preview
+            </a>
+          </li>
+          <li class="list__divider"></li>
+          <li class="list__item">
+            <a href="#" class="list__link">
+              Posted In...
+            </a>
+          </li>
+          <li class="list__divider"></li>
+          <li class="list__item">
+            <a href="#" class="list__link">
+              Delete Post
+            </a>
+          </li>
+        </section>
+      </section>
+
+      <div class="box box_fields mbm">
+        <div class="box__body">
+
+           <section class="field field_plain">
+            <i class="icon icon_groups_transparent field__icon"></i>
+            <section class="input_textarea input_textarea_plain">
+              <input type="text" placeholder="Add groups" id="js-groups" class="input_text input_text_plain input_text_plain_small">
+            </section>
+          </section>
+
+
+          <section class="field field_plain">
+            <i class="icon icon_tag_transparent field__icon"></i>
+            <section class="input_textarea input_textarea_plain">
+              <input type="text" placeholder="Add tags" id="js-tags" class="input_text input_text_plain input_text_plain_small">
+            </section>
+          </section>
+
+          <section class="field field_plain">
+            <i class="icon icon_category_transparent field__icon"></i>
+            <section class="input_textarea input_textarea_plain">
+              <input type="text" placeholder="Add categories" id="js-categories" class="input_text input_text_plain input_text_plain_small">
+            </section>
+          </section>
+
+          <section class="field field_plain">
+            <i class="icon icon_create_transparent field__icon"></i>
+            <section class="input_textarea input_textarea_plain">
+              <section class="list">
+                <ul class="list__body">
+                  <li class="list__item is-disabled">
+                    <span class="list__link">
+                      Bucky F.
+                    </span>
+                  </li>
+                </ul>
+              </section>
+              <input type="text" value="" placeholder="Add contributors" id="js-contributors" class="input_text input_text_plain input_text_plain_small">
+            </section>
+          </section>
+
+        </div>
+      </div>
+      <!-- <a class="js-focus button button_focus">Focus Mode</a> -->
+    </aside>

@@ -241,12 +241,14 @@ body .redactor_air {
   	zoom: 1;
   	outline: none;
   	text-decoration: none;
-  	background-image: image-url("no-repeat.png");
+  	background-image: url("no-repeat.png");
     background-repeat: no-repeat;
     vertical-align: middle;
     font-style: normal;
    	position: relative;
-    background-clip: "content-box";
+    background-clip:content-box;
+    -webkit-background-clip:content-box;
+    -mos-background-clip:content-box;
     padding: 10px;
   }
 	&:after{
@@ -305,7 +307,7 @@ body .redactor_air {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .redactor_toolbar li a {
-    background-image: image-url("no-repeat-2x.png");
+    background-image: url("no-repeat-2x.png");
     background-size: 200px 3816px;
   }
 }
@@ -561,7 +563,7 @@ body .redactor_air {
   padding-top: 0;
   padding-bottom: 0;
   min-height: 60px;
-  background: #eee image-url("indicator.gif") no-repeat center center;
+  background: #eee url("indicator.gif") no-repeat center center;
   background-size: 16px 16px;
 }
 
