@@ -42,20 +42,23 @@
   });
  
   $(".field__label_inside").inFieldLabels();
-  $(document).on("click", function() {
+  
+  $(document).on("click", function(){
     $(this).find('.dropdown__menu').hide();
-    return $(".js-dropdown").parent().removeClass('active');
+    $(".js-dropdown").parent().removeClass('active');
   });
-  $(document).on("click", ".js-dropdown", function(e) {
-    var $this_menu;
+
+  $(document).on("click", ".js-dropdown", function(e){
+    alert('dropdown');
     e.preventDefault();
     e.stopPropagation();
     $this_menu = $(this).closest(".js-dropdown").parent().find('.dropdown__menu');
     $this_menu.toggle();
     $('.dropdown__menu').not($this_menu).hide();
-    $('.dropdown__menu').not($this_menu).parent().removeClass('active');
-    return $(this).closest(".js-dropdown").parent().toggleClass('active');
+    $('.dropdown__menu').not($this_menu).parent().removeClass('is-active');
+    $(this).closest(".js-dropdown").parent().toggleClass('is-active');
   });
+
   $(document).on("click", ".js-accordion", function(e) {
     var $this_menu;
     e.preventDefault();
@@ -79,28 +82,7 @@
       }
     });
   });
-  $(document).on("click", function(e) {
-    if ($(e.target).parent(".nav-bar_user").length === 0) {
-      $(this).find('.dropdown__menu').hide('fast');
-      return $(".nav-bar_user .js-dropdown").parent().removeClass('active');
-    }
-  });
-  $(document).on("click", ".side_nav header h6", function() {
-    $(".side_nav section").removeClass('active');
-    return $(this).parent().parent().addClass('active');
-  });
-  $(document).on("click", ".side_nav .active header h6", function() {
-    return $(".side_nav section").removeClass('active');
-  });
-  $(document).on("click", "#header-search-button", function() {
-    return $(this).parents("form").submit();
-  });
-  $(document).on("focus", ".search_box input", function() {
-    return $(this).parents("form").addClass('focus');
-  });
-  $(document).on("blur", ".search_box input", function() {
-    return $(this).parents("form").removeClass('focus');
-  });
+  
 
 
   // begin new UX js
