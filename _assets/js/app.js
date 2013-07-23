@@ -104,7 +104,7 @@
 
 
   // begin new UX js
-  $('textarea').autoGrow();
+  $('js-autogrow').autoGrow();
 
 });
 
