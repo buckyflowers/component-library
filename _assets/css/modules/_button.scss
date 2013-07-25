@@ -1,10 +1,10 @@
 // Base Element
 .button {
   @extend .no-select;
-  @include bg_1;
-  @include box-sizing(border-box);
+  @extend .theme_1;
   border-radius: 4px;
-  border: 1px solid;
+  border-width: 1px;
+  border-style: solid;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
@@ -25,26 +25,31 @@
   .button_icon__highlight {
     display: block;
     float: left;
-    width: 38px;
-    height: 100%;
+    width: 40px;
+    height: 40px;
     background: transparent;
-    background: rgba(12,12,22,.15);
+    background: rgba(12,12,22,.1);
     border-radius: 3px 0 0 3px;
-    box-shadow: 1px 0 0 rgba(12,12,22,.3);
-    margin-right: 16px;
+    border-right: 1px solid #000;
+    border-color: rgba(12,12,22,.3);
+    box-shadow: 1px 0 0 rgba(255,255,255,.1);
+    margin: -1px 16px 0 -1px;
   }
 
   .button_size_small .button_icon__highlight {
     margin-right: 8px;
-    width: 24px;
+    height: 26px;
+    width: 26px;
   }
   .button_size_medium .button_icon__highlight {
     margin-right: 10px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
   }
   .button_size_large .button_icon__highlight {
     margin-right: 20px;
-    width: 58px;
+    height: 60px;
+    width: 60px;
   }
 
 
@@ -74,7 +79,6 @@
   height: 162px;
   text-align: center;
   color: #222;
-  @extend .bg_7;
 }
 
 .button_square {
@@ -180,6 +184,7 @@
 .button_icon {
   padding-left: 0 !important;
   white-space:nowrap;
+  overflow: visible;
 }
 
 
@@ -243,7 +248,7 @@
 
 .button-bar_tool {
   box-shadow: none;
-  .button { width: 32px; @extend .bg_inset-white;}
+  .button { width: 32px; @extend .theme_inset-white;}
 }
 
 .button_play {
@@ -353,23 +358,23 @@
 
 // Extensions: colors
 .button_like {
-  @extend .bg_8;
+  @extend .theme_6;
 }
 
 .button_follow {
-  @extend .bg_12;
+  @extend .theme_7;
 }
 
 .button_sign-in, .button_create, .button_invite, .button_sign-up {
-  @extend .bg_3
+  @extend .theme_3
 }
 
 .button_primary, .button_success, .button_approve, .button_publish {
-  @extend .bg_4;
+  @extend .theme_4;
 }
 
 .button_remove, .button_error, .button_negative {
-  @extend .bg_10;
+  @extend .theme_5;
 }
 
 

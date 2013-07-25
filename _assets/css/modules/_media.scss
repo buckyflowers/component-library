@@ -130,7 +130,7 @@ Styleguide 6.0
     bottom: 0;
     left: 252px;
     @extend .border_dark;
-    @extend .bg_inset;
+    @extend .theme_inset;
   }
 }
 .media_weblink:hover { 

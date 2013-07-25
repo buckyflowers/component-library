@@ -6,7 +6,7 @@ Styleguide 14.0
 
 .publish-bar {
   @extend .cf;
-  @extend .bg_5;
+  @extend .theme_2;
   padding: .8em;
   color: #fff;
   border: 1px solid;
@@ -15,8 +15,8 @@ Styleguide 14.0
   border-radius: 4px;
   line-height: 40px;
   .button {
-    @extend .bg_inset;
-    @extend .bg_5__item;
+    @extend .theme_inset;
+    @extend .theme_2__item;
   }
 }
 

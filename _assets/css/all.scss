@@ -4,6 +4,8 @@
 // base - reset, base element styles, custom mixins, variables, animations, typography, and grid
 @import "base/variables";
 @import "base/mixins";
+@import "base/theme-mixins";
+@import "theme";
 @import "base/reset";
 @import "base/content";
 @import "base/heading";
@@ -52,4 +54,3 @@
 
 // utilities, helpers, states, and themes
 @import "utilities";
-@import "theme";

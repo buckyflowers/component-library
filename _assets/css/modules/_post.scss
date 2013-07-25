@@ -190,7 +190,7 @@
   text-decoration: none;
   border-radius: 4px;
   @extend .no-select;
-  @include bg_1;
+  @extend .theme_1;
 }
 .redactor_box textarea:focus {
 	background-color: #fff;

@@ -25,7 +25,7 @@ Styleguide 17.0
     margin: 0 -1px -1px -1px;
     border: 1px solid #ccc;
     border-radius: 0 0 4px 4px;
-    @extend .bg_7;
+    @extend .theme_1;
     @extend .cf;
   }
 
@@ -91,8 +91,8 @@ Styleguide 17.0
 
 // User stats box
 .box_user-stats {
-  @extend .bg_7;
-  @extend .bg_inset;
+  @extend .theme_1;
+  @extend .theme_inset;
   @extend .box_rounded;
 }
 
@@ -286,7 +286,7 @@ Styleguide 17.0
 .box_credit-card {
   margin: 0 140px;
   @extend .box_rounded;
-  @extend .bg_5;
+  @extend .theme_2;
   position: relative;
   .box__header {
     padding: 1.6em 1.6em 0 1.6em;
@@ -294,7 +294,7 @@ Styleguide 17.0
   .box__body {
     padding: .8em 1.6em 1.6em 1.6em;
   }
-  .button, .input_text, select {@extend .bg_5__item}
+  .button, .input_text, select {@extend .theme_2__item}
   .field_with_errors {display: inline-block;}
   .error {color: #ef4d4d;}
 }
@@ -437,10 +437,10 @@ Styleguide 17.0
 }
 
 .box_dark {
-  @extend .bg_5;
+  @extend .theme_2;
   .button {
     @extend .border_dark;
-    @extend .bg_inset;
+    @extend .theme_inset;
   }
 }
 
@@ -470,7 +470,7 @@ Styleguide 17.0
     padding: 6px;
   }
   .button {
-    @extend .bg_inset;
+    @extend .theme_inset;
     @extend .button_full;
     &:last-child {
       margin: 0;
@@ -576,6 +576,6 @@ Styleguide 17.0
     @extend .flat;
   }
   .button {
-    @extend .bg_inset;
+    @extend .theme_inset;
   }
 }

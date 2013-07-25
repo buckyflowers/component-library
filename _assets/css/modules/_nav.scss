@@ -136,7 +136,7 @@ Styleguide 12.0
   	font-weight: bold;
 		&:hover {background:#efefef;}
 	}
-	.nav__link { &.state_selected {@extend .bg_3;}}
+	.nav__link { &.state_selected {@extend .theme_3;}}
 }
 
 
@@ -275,7 +275,7 @@ Styleguide 12.0
 		&.state_selected {
 			position: relative;
 			z-index: 1;
-			@extend .bg_3;
+			@extend .theme_3;
 			border-width: 1px;
 			border-style: solid;
 			margin-left: -1px;
