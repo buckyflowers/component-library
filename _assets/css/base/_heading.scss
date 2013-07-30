@@ -1,54 +1,53 @@
-// TODO: take out math and comments, use sass comments
-// headings
-
 .heading {
-
+    display: block;
+    line-height: 1.2em;
 }
 
-.nano { // 15px
-    font-size: #{14 / $em}em;
-    line-height: 1em;
+.h_ultra {
+    font-size: #{$font-size * 3.75}px;
+    line-height: 1.2em;
 }
 
-.micro { // 18px
-    font-size: #{18 / $em}em;
-    line-height: 1em;
-}
-.milli  { // 21px
-    font-size: #{21 / $em}em;
-    line-height: 1em;
+.h1 {
+    font-size: #{$font-size * 3}px;
+    line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.normal { // 24px
-    font-size: #{24 / $em}em;
-    line-height: 1em;
+.h2 { // 32px
+    font-size: #{$font-size * 2}px;
+    line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.kilo { // 30px
-    font-size: #{30 / $em}em;
-    line-height: 1em;
+.h3 { // 24px
+    font-size: #{$font-size * 1.5}px;
+    line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.mega { // 36px
-    font-size: #{36 / $em}em;
-    line-height: 1em;
+.h4  {
+    font-size: #{$font-size * 1.3125}px;
+    line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.giga { // 48px
-    font-size: #{48 / $em}em;
-    line-height: 1em;
-    text-rendering: optimizeLegibility;
+.h5 { 
+    font-size: #{$font-size * 1.125}px;
+    line-height: 1.2em;
 }
 
-.tera {
-/* 55px / 16px */
-    font-size: #{60 / $em}em;
-    line-height: 1em;
+.h6 {
+    font-size: #{$font-size}px;
+    line-height: 1.2em;
 }
 
+.h7 {
+    font-size: #{$font-size * 0.875}px;
+    line-height: 1.2em;
+}
 
-
+.h8 {
+    font-size: #{$font-size * 0.75}px;
+    line-height: 1.2em;
+}

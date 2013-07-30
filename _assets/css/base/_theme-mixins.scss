@@ -5,8 +5,8 @@
   border-color: #b6bcca;
   border-bottom-color: #8f94a2;
   text-shadow: 0 1px 0px rgba(255,255,255,1);
-  @include background-image(linear-gradient( rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 1px rgba(255,255,255,.7  ), 0 1px 3px rgba(0,0,0,.15);
+  @include background-image(linear-gradient( rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 1px rgba(255,255,255,.5  ), 0 1px 3px rgba(0,0,0,.15);
   &.button:hover{ background-color: #edf0f6; color: #42454c;}
   &.button:active { background-color: #e4e8f1; }
 }

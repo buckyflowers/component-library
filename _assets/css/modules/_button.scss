@@ -83,9 +83,9 @@
 
 .button_square {
   display: block;
-  height: 26px;
-  width: 26px;
-  line-height: 26px;
+  height: 40px;
+  width: 38px;
+  line-height: 38px;
   text-align: center;
   @include opacity(1);
   padding: 0;
@@ -95,7 +95,7 @@
   display: block;
   height: 26px;
   width: 26px;
-  line-height: 26px;
+  line-height: 24px;
   padding: 0;
 }
 
@@ -103,15 +103,15 @@
   display: block;
   height: 32px;
   width: 32px;
-  line-height: 32px;
+  line-height: 30px;
   padding: 0;
 }
 
 .button_square_large {
   display: block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  height: 60px;
+  width: 60px;
+  line-height: 58px;
   text-align: center;
   @include opacity(1);
   padding: 0;

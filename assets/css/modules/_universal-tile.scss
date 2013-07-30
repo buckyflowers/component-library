@@ -168,29 +168,6 @@
   }
 }
 
-@media screen and (max-width: 1008px) {
-  .universal-tile__thumb {
-    .figure__image {
-      margin-top: 0;
-    }
-  }
-  .universal-tile_series {
-    .universal-tile__activity {
-      .list {
-        margin-left: 18px;
-      }
-      .list__item  a{
-        width: 220px;
-        @extend .ellipsis;
-      }
-    }
-    .universal-tile__type {
-      background: #3a475a;
-      border-color: #252c3f;
-    }
-  }
-}
-
 
 // Universal Tile List
 .universal-tile_list {
@@ -227,6 +204,7 @@
       padding: 0;
       color: $link-color;
       &:before {
+        z-index: 1;
         content: "";
         display: block;
         position: absolute;
@@ -286,70 +264,5 @@
   .universal-tile__type {
     right: 26px;
     top: 26px;
-  }
-}
-
-
-@media screen and (max-width: 1008px) {
-  .universal-tile_list{
-    .universal-tile__header {
-      float: none;
-      width: auto;
-      margin-right: 84px;
-    }
-    .universal-tile__footer {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 84px;
-      height: 82px
-    }
-    .universal-tile__activity {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .universal-tile_list{
-    margin-bottom: .8em;
-    border-radius: 0;
-    margin: 0;
-    border-width: 1px;
-    margin-top: -1px;
-    .universal-tile__avatar {
-      width: 32px;
-      margin: 6px;
-      .figure__body:before {
-        border-radius: 4px;
-      }
-      .figure__image {
-        border-radius: 4px;
-      }
-    }
-    .universal-tile__header {
-      float: none;
-      width: auto;
-      margin-right: 0;
-      padding-left: 0;
-    }
-    .universal-tile__footer {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 2px;
-      width: 26px;
-      height: 26px;
-      .universal-tile__type {
-        width: 24px;
-        height: 24px;
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        border-radius: 4px;
-        .icon {margin: 5px 6px; display: block;}
-      }
-    }
   }
 }

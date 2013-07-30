@@ -1,11 +1,14 @@
 .dropdown{
+  z-index: 10;
   position:relative;
   &.is-active {
     // looks pressed when active
     .dropdown__toggle {
-      @extend .button_active;
       &:after, &:before {
         display: block;
+      }
+      &.button {
+        @extend .button_active;
       }
     }
     .dropdown__label{
@@ -174,15 +177,56 @@
     }
 
 // Extensions
+
+// Positions the dropdown in the middle.
+// REQUIRES: inline negative margin of half the width of dropdown menu.
 .dropdown_middle {
-  left: auto;
-  right: auto;
-  width: 100%;
-  &:before, &:after{left:50%;}
+  .dropdown__menu {
+    left: 50%;
+  }
+  @extend .dropdown_middle-chevron;
 }
 
+// Positions menu on the right edge.
 .dropdown_right {
-  left: auto;
-  right: .8em;
-  &:before, &:after{left:auto; right: 23px;}
+  .dropdown__menu {
+    left: auto;
+    right: 0;
+  }
+  .dropdown__toggle {
+    &:before, &:after{
+      left:auto;
+      right: 15px;
+    }
+  }
+}
+
+// Positions the little chevron in the center.
+.dropdown_middle-chevron {
+  .dropdown__toggle {
+    &:before, &:after{
+      left:50%;
+    }
+  }
+}
+
+.dropdown_up {
+  .dropdown__toggle {
+    &:after, &:before {
+      border: solid transparent;
+      border-top-color: #2d3237;
+      bottom: 100%;
+      margin-bottom: 6;
+      top: auto;
+    }
+    &:before {
+      border-top-color: #090a0b;
+      margin-bottom: -6px;
+    }
+  }
+  .dropdown__menu {
+    border-radius: 4px 4px 0 0;
+    bottom: 100%;
+    top: auto;
+  }
 }

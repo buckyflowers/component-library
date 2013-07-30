@@ -40,7 +40,6 @@
 
 .icon_small {
   margin-top: 0;
-  margin-right: 4px;
   width: 10px;
   height: 10px;
 }
@@ -192,9 +191,9 @@
 }
 
 .icon_small {
-  &.icon_plus{ background-position: -5px -605px; }
-  &.icon_plus_white{ background-position:-25px -605px; }
-  &.icon_plus_transparent{ background-position: -45px -605px; }
+  &.icon_plus{ background-position: -5px -607px; }
+  &.icon_plus_white{ background-position:-25px -607px; }
+  &.icon_plus_transparent{ background-position: -45px -607px; }
 }
 
 .icon_minus{ background-position: 0 -620px; }
