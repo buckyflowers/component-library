@@ -32,15 +32,17 @@
 
 // Bright blue 
 @mixin theme-3 {
-  background-color: #5a78e9;
-  border-color: #375da5;
-  border-bottom-color: #1a2f57;
+  background-color: $link-color;
+  // border-color: #375da5;
+  border-color: darken($link-color, 8%);
+  // border-bottom-color: #1a2f57;
+  border-bottom-color: darken($link-color, 30%);
   color: #fff;
   text-shadow: 0 1px 0 rgba(0,0,0,.5);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15);
   @include background-image(linear-gradient( rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%));
-  &.button:hover {color: #fff; background-color: #6091ec;}
-  &.button:active { background-color: #5682d3; }
+  &.button:hover {color: #fff; background-color: $link-color-hover;}
+  &.button:active { background-color: $link-color; }
 }
 @mixin theme-3__item {
   border-color: #375da5;
