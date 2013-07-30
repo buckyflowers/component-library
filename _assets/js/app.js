@@ -49,7 +49,6 @@
   });
 
   $(document).on("click", ".js-dropdown", function(e){
-    alert('dropdown');
     e.preventDefault();
     e.stopPropagation();
     $this_menu = $(this).closest(".js-dropdown").parent().find('.dropdown__menu');
