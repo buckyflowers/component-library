@@ -85,6 +85,14 @@ Styleguide 3.0
   }
 }
 
+// provides left and right padding for lists with lines
+.list_line-padded {
+  @extend .list_line;
+  .list__item {
+    padding: .6em .75em;
+  }
+}
+
 .list_accordion {
   display: block;
   border-radius: 4px;
