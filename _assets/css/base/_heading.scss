@@ -1,4 +1,4 @@
-.heading {
+.h {
     display: block;
     line-height: 1.2em;
 }
@@ -8,46 +8,46 @@
     line-height: 1.2em;
 }
 
-.h1 {
+.h_1 {
     font-size: #{$font-size * 3}px;
     line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.h2 { // 32px
+.h_2 { // 32px
     font-size: #{$font-size * 2}px;
     line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.h3 { // 24px
+.h_3 { // 24px
     font-size: #{$font-size * 1.5}px;
     line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.h4  {
+.h_4  {
     font-size: #{$font-size * 1.3125}px;
     line-height: 1.2em;
     text-rendering: optimizeLegibility;
 }
 
-.h5 { 
+.h_5 { 
     font-size: #{$font-size * 1.125}px;
     line-height: 1.2em;
 }
 
-.h6 {
+.h_6 {
     font-size: #{$font-size}px;
     line-height: 1.2em;
 }
 
-.h7 {
+.h_7 {
     font-size: #{$font-size * 0.875}px;
     line-height: 1.2em;
 }
 
-.h8 {
+.h_8 {
     font-size: #{$font-size * 0.75}px;
     line-height: 1.2em;
 }

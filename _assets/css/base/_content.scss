@@ -79,12 +79,12 @@ body {line-height:1.4em;}
   }
 }
 
-.is-formatted h1 {font-size: 2.25em;}    //36 @ 16
-.is-formatted h2 {font-size: 1.875em;}   //30 @ 16
-.is-formatted h3 {font-size: 1.5em;}     //24 @ 16
-.is-formatted h4 {font-size: 1.3125em;}  //21 @ 16
-.is-formatted h5 {font-size: 1.125em;}   //18 @ 16
-.is-formatted h6 {font-size: 1em;}       //16 @ 16
+.is-formatted h1 {@extend .h_1;}    //36 @ 16
+.is-formatted h2 {@extend .h_2;}   //30 @ 16
+.is-formatted h3 {@extend .h_3;}     //24 @ 16
+.is-formatted h4 {@extend .h_4;}  //21 @ 16
+.is-formatted h5 {@extend .h_5;}   //18 @ 16
+.is-formatted h6 {@extend .h_6;}       //16 @ 16
  
 .is-formatted h1:first-child, .is-formatted script + h1,
 .is-formatted h2:first-child, .is-formatted script + h2,

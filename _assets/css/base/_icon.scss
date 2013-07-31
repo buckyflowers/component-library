@@ -56,9 +56,9 @@
   width: 80px;
 }
 
-.icon_setting{ background-position:0 0; }
-.icon_setting_white{ background-position:-20px 0; }
-.icon_setting_transparent{ background-position: -40px 0; }
+.icon_gear{ background-position:0 0; }
+.icon_gear_white{ background-position:-20px 0; }
+.icon_gear_transparent{ background-position: -40px 0; }
 
 .icon_alert{ background-position: 0 -20px; }
 .icon_alert_white{ background-position: -20px -20px; }
@@ -71,7 +71,7 @@
 .icon_checkmark_special { background-position: -60px -40px; }
 
 .icon_small {
-  &.icon_checkmark{ background-position: -0px -60px; }
+  &.icon_checkmark{ background-position: -5px -65px; }
   &.icon_checkmark_white{ background-position:-25px -65px; }
   &.icon_checkmark_transparent{ background-position: -45px -65px; }
   &.icon_checkmark_special { background-position: -65px -65px; }
@@ -81,9 +81,9 @@
 .icon_search_white{ background-position:-20px -80px; }
 .icon_search_transparent{ background-position: -40px -80px; }
 
-.icon_home{  background-position: 0 -80px; }
-.icon_home_white{ background-position:-20px -80px; }
-.icon_home_transparent{ background-position: -40px -80px; }
+.icon_home{  background-position: 0 -100px; }
+.icon_home_white{ background-position:-20px -100px; }
+.icon_home_transparent{ background-position: -40px -100px; }
 
 .icon_eye{  background-position: 0 -120px; }
 .icon_eye_white{ background-position:-20px -120px; }
@@ -118,23 +118,19 @@
 .icon_video_white{ background-position:-20px -260px; }
 .icon_video_transparent{ background-position: -40px -260px; }
 
-.icon_series, .icon.series{ background-position: 0 -280px; }
-.icon_series_white{ background-position:-20px -280px; }
-.icon_series_transparent{ background-position: -40px -280px; }
-.icon_series_special{ background-position: -60px -280px; }
+.icon_stack, .icon.series{ background-position: 0 -280px; }
+.icon_stack_white{ background-position:-20px -280px; }
+.icon_stack_transparent{ background-position: -40px -280px; }
+.icon_stack_special{ background-position: -60px -280px; }
 
-.icon_spreadsheet{ background-position: 0 -300px; }
-.icon_spreadsheet_white{ background-position:-20px -300px; }
-.icon_spreadsheet_transparent{ background-position: -40px -300px; }
+.icon_graph{ background-position: 0 -300px; }
+.icon_graph_white{ background-position:-20px -300px; }
+.icon_graph_transparent{ background-position: -40px -300px; }
 
 .icon_question, .icon.question { background-position: -0px -320px; }
 .icon_question_white{ background-position:-20px -320px; }
 .icon_question_transparent{ background-position: -40px -320px; }
 .icon_question_special{ background-position: -60px -320px; }
-
-// .icon_series, .icon.series{ background-position: 0 -340px; }
-// .icon_series_white{ background-position:-20px -340px; }
-// .icon_series_transparent{ background-position: -40px -340px; }
 
 .icon_lock{ background-position: 0 -360px; }
 .icon_lock_white{ background-position:-20px -360px; }
@@ -172,9 +168,9 @@
 .icon_download_white{ background-position:-20px -520px; }
 .icon_download_transparent{ background-position: -40px -520px; }
 
-.icon_pie-chart{ background-position: 0 -540px; }
-.icon_pie-chart_white{ background-position:-20px -540px; }
-.icon_pie-chart_transparent{ background-position: -40px -540px; }
+.icon_pie{ background-position: 0 -540px; }
+.icon_pie_white{ background-position:-20px -540px; }
+.icon_pie_transparent{ background-position: -40px -540px; }
 
 .icon_clock{ background-position: 0 -560px; }
 .icon_clock_white{ background-position:-20px -560px; }
@@ -286,9 +282,9 @@
 .icon_right_white{ background-position: -20px -1040px;  }
 .icon_right_transparent{ background-position: -40px -1040px;  }
 
-.icon_category { background-position: 0 -1060px; }
-.icon_category_white{ background-position: -20px -1060px; }
-.icon_category_transparent{ background-position: -40px -1060px; }
+.icon_folder { background-position: 0 -1060px; }
+.icon_folder_white{ background-position: -20px -1060px; }
+.icon_folder_transparent{ background-position: -40px -1060px; }
 
 .icon_tag { background-position: 0 -1080px;  }
 .icon_tag_white{ background-position: -20px -1080px;  }
@@ -296,7 +292,7 @@
 
 .icon_upload { background-position: 0 -1240px; width: 26px; }
 .icon_upload_white{ background-position: -40px -1240px; width: 26px;  }
-.icon_upload_transparent{ background-position: -80px -1240px; width: 26px;  }
+.icon_upload_transparent{ background-position: -85px -1240px; width: 26px;  }
 
 .icon_cursor { background-position: 0 -1260px;  }
 .icon_cursor_white{ background-position: -20px -1260px;  }
@@ -314,18 +310,10 @@
 .icon_cam_white{ background-position: -20px -1320px;  }
 .icon_cam_transparent{ background-position: -40px -1320px;  }
 
-.icon_upload-file { background-position: 0 -1320px; @extend .icon_gigantic;}
-.icon_write-text { background-position: 0 -1400px;  @extend .icon_gigantic;}
-.icon_record-button { background-position: 0 -1480px;  @extend .icon_gigantic;}
-.icon_record-webcam { background-position: 0 -1560px;  @extend .icon_gigantic;}
-.icon_record-screencast { background-position: 0 -1640px;  @extend .icon_gigantic;}
-.icon_web-link { background-position: 0 -1715px;  @extend .icon_gigantic;}
-.icon_record-audio { background-position: 0 -1800px;  @extend .icon_gigantic;}
+.icon_list { background-position: 0 -1340px;  }
+.icon_list_white{ background-position: -20px -1340px;  }
+.icon_list_transparent{ background-position: -40px -1340px;  }
 
-.icon_card {display: block; float: left; margin: 0 0 0 6px; width: 26px; height: 19px; overflow: hidden; text-indent: -100000px;}
-.icon_visa {background-position: -1px -2040px; @extend .icon_card;}
-.icon_mastercard {background-position: -32px -2040px; @extend .icon_card;}
-.icon_amex {background-position: -63px -2040px; @extend .icon_card;}
-.icon_discover {background-position: -94px -2040px; @extend .icon_card;}
-
-.icon_download-misc_file { background-position: 0 -1322px; @extend .icon_gigantic;}
+.icon_grid { background-position: 0 -1360px;  }
+.icon_grid_white{ background-position: -20px -1360px;  }
+.icon_grid_transparent{ background-position: -40px -1360px;  }
