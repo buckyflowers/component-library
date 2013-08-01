@@ -56,12 +56,12 @@ body {line-height:1.4em;}
 .is-formatted ul {list-style:disc;}
 .is-formatted ol {list-style:decimal;}
 
-.h1, .is-formatted h1,
-.h2, .is-formatted h2,
-.h3, .is-formatted h3,
-.h4, .is-formatted h4,
-.h5, .is-formatted h5,
-.h6, .is-formatted h6{
+.is-formatted h1,
+.is-formatted h2,
+.is-formatted h3,
+.is-formatted h4,
+.is-formatted h5,
+.is-formatted h6{
   margin-bottom: 1.2em;
   margin-top:2.4em;
   font-weight:bold;
@@ -79,12 +79,12 @@ body {line-height:1.4em;}
   }
 }
 
-.h1, .is-formatted h1 {font-size: 2.25em;}    //36 @ 16
-.h2, .is-formatted h2 {font-size: 1.875em;}   //30 @ 16
-.h3, .is-formatted h3 {font-size: 1.5em;}     //24 @ 16
-.h4, .is-formatted h4 {font-size: 1.3125em;}  //21 @ 16
-.h5, .is-formatted h5 {font-size: 1.125em;}   //18 @ 16
-.h6, .is-formatted h6 {font-size: 1em;}       //16 @ 16
+.is-formatted h1 {@extend .h_1;}    //36 @ 16
+.is-formatted h2 {@extend .h_2;}   //30 @ 16
+.is-formatted h3 {@extend .h_3;}     //24 @ 16
+.is-formatted h4 {@extend .h_4;}  //21 @ 16
+.is-formatted h5 {@extend .h_5;}   //18 @ 16
+.is-formatted h6 {@extend .h_6;}       //16 @ 16
  
 .is-formatted h1:first-child, .is-formatted script + h1,
 .is-formatted h2:first-child, .is-formatted script + h2,
@@ -243,77 +243,6 @@ hr{
   @include opacity(.2);
   margin: 0;
   clear:both;
-}
-
-
-// TODO: move this
-// hilight -- used to highlight inline text
-// originally called label but conflicted on site with old stuff
-.hilight {
-  text-align: center;
-  display: inline-block;
-  height: 44px;
-  line-height: 42px;
-  padding: 0 6px;
-  color: #777;
-  font-weight: bold;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #ddd;
-  border-radius: 4px;
-  @include box-sizing(border-box);
-}
-.hilight_full{display:block; padding: 0;}
-.hilight_you{
-  background: #ddd;
-  color: #666;
-  display: block;
-}
-.hilight_info {}
-.hilight_success {}
-.hilight_warning {}
-.hilight_highlight {}
-.hilight_following {}
-.hilight_important {
-    color: #345112;
-    box-shadow: 0 0 3px rgba(127, 206, 33, 0.78);
-    background-color: #d6f987;
-}
-.hilight_example {
-  display: block;
-  background:none;
-  border: 1px dashed #ccc;
-}
-.hilight_bravo {
-  @extend .hilight_important;
-  display: block;
-}
-
-.hilight_size_mini {
-  height: 16px;
-  padding: 0 6px;
-  text-transform: uppercase;
-  font-size: .666em; //10px
-  font-weight: bold;
-  line-height: 19px;
-  letter-spacing: 1px;
-}
-.hilight_size_small {
-  height: 26px;
-  padding:0 6px;
-  font-size: .86666em; // 12px
-  line-height: 28px;
-}
-.hilight_size_medium {
-  height: 32px;
-  padding:0 6px;
-  line-height: 34px;
-}
-.hilight_size_large {
-  height: 60px;
-  font-size: 1.4em; 
-  padding: 0 6px;
-  line-height: 62px;
 }
 
 
