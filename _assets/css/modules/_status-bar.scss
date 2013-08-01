@@ -17,7 +17,7 @@
     height: 60px;
     width: 0;
     border: 1px solid;
-    @extend .theme_3;
+    @include theme-3;
   }
   .status-bar__label {
     display: block;
@@ -32,7 +32,7 @@
 
 .status-bar_uploading {
   .status-bar__meter {
-    background-image: image-url("Uploading-Bar.gif");
+    background-image: url("Uploading-Bar.gif");
   }
 }
 
@@ -40,7 +40,7 @@
   color: #345112;
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
   .status-bar__meter {
-    background-image: image-url("Processing-Bar.gif") !important;
+    background-image: url("Processing-Bar.gif") !important;
     @extend .theme_4;
     width: auto;
   }
@@ -58,8 +58,24 @@
 
 .status-bar_indicating {
   .status-bar__meter {
-    background-image: image-url("Indicating-Bar.gif") !important;
+    background-image: url("Indicating-Bar.gif") !important;
     @extend .theme_2;
     width: 100%;
+  }
+}
+
+
+.status-bar_progress {
+  display: block;
+  height: 20px;
+  @include background-image(linear-gradient( rgba(13,19,46,1) 100%, rgba(33,91,46,1) 100%));
+  box-shadow: inset 0 1px 3px rgba(0,0,0, 0.2), 0 1px 0 rgba(255,255,255, 0.9);
+  border-radius: 4px;
+  @include transition(all .2s linear);
+  .status-bar__meter {
+    display: block;
+    height: 20px;
+    border-radius: 4px;
+    background: url("progress-meter-background.gif") repeat;
   }
 }

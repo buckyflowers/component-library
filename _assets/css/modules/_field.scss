@@ -487,8 +487,8 @@ Styleguide 13.0
     -webkit-appearance: none;
     font-size: .8666em;
     padding: 0 24px 0 8px;
-    background: image-url("no-repeat.png") right -3731px no-repeat,
-                image-url("no-repeat.png") 0 -3785px repeat-x, #cbced6;
+    background: url("no-repeat.png") right -3731px no-repeat,
+                url("no-repeat.png") 0 -3785px repeat-x, #cbced6;
     @include bf-box-sizing();
     @include fontstack;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 1px rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.15);
@@ -499,8 +499,8 @@ Styleguide 13.0
 
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .field_billing select {
-    background: image-url("no-repeat-2x.png") right -3731px no-repeat,
-                image-url("no-repeat-2x.png") 0 -3785px repeat-x, #cbced6;
+    background: url("no-repeat-2x.png") right -3731px no-repeat,
+                url("no-repeat-2x.png") 0 -3785px repeat-x, #cbced6;
     background-size: 200px 3816px;
   }
 }
